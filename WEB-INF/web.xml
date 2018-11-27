@@ -48,7 +48,7 @@
 
 <servlet>
   <servlet-name> putGoodsServlet </servlet-name>
-  <servlet-class >myservlet.control.PutToCar </servlet-class>
+  <servlet-class >myservlet.control.PutGoodsToCar </servlet-class>
 </servlet>
 <servlet-mapping>
   <servlet-name> putGoodsServlet </servlet-name>
