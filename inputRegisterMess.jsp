@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=GB2312" %>
+<%@ page contentType="text/html;charset=utf-8" %>
 <jsp:useBean id="userBean" class="mybean.data.Register" scope="request"/>
 <HEAD><%@ include file="head.txt" %></HEAD>
 <title>注册页面</title>

@@ -20,4 +20,8 @@
 二.提示unsupported encoding [ GB2312]
 解决办法：charset与GB2312间不能有空格
 
-三.index.jsp中文乱码问题
+三.提示head.txt的Page属性值与JSP所设置的矛盾。
+将JSP页面的page属性向head.txt同步，有多少个空格都要一模一样。
+
+四.JSP页面静态文字的中文乱码问题
+解决方法：统一口径，charset都用utf-8，我已将所有jsp文件进行修改

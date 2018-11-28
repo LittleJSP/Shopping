@@ -1,4 +1,4 @@
-<%@ page contentType ="text/html; charset=GB2312" %>
+<%@ page contentType ="text/html;charset=utf-8" %>
 <HTML> <BODY>
 <HEAD><%@ include file="head.txt" %></HEAD>
 <title>首页</title>
