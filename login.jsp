@@ -1,7 +1,6 @@
-login.jsp(效果如图10.10所示)
-<%@ page contentType = "text/html;charset=utf-8" % >
-<jsp:useBean id = " loginBean" class= "mybean.data.Login" scope= "session"/>
-<HTML><HEAD><%@ include file = "head.txt" %> </HEAD>
+<%@ page contentType = "text/html;charset=utf-8" %>
+<jsp:useBean id = "loginBean" class= "mybean.data.Login" scope= "session"/>
+<HTML><HEAD><%@ include file ="head.txt" %> </HEAD>
 <BODY background=image/back.jpg> <font size = 2>
 < div  align = " center " >
 <table border = 2>
@@ -13,7 +12,7 @@ login.jsp(效果如图10.10所示)
 <Input type=submit name="g" value ="提交">
 </form> </div>
 <div align ="center">
-登录反馈信息：<jsp：:getProperty name = "loginBean" property ="backNews"/>
+登录反馈信息：<jsp:getProperty name = "loginBean" property ="backNews"/>
 <br>登录名称：<jsp:getProperty name= "loginBean" property="logname" />
 <div> </font>
 </BODY> </HTML>
