@@ -1,4 +1,3 @@
-inputRegister Mess jsp(效果如图10.9所示
 <%@ page contentType="text/html;charset=GB2312" %>
 <jsp:useBean id="userBean" class="mybean.data.Register" scope="request"/>
 <HEAD><%@ include file="head.txt" %></HEAD>

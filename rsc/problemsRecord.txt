@@ -1,0 +1,23 @@
+开发过程所遇问题记录
+
+零.无法浏览应用
+  在浏览器内进行浏览，提示404错误。
+  通过仿生实验发现，是由于web.xml文件导致。
+  目前仍在对web.xml文件进行排查
+
+  是web.xml里面的一堆servlet和servlet-mapping内容所致
+  进一步排查，发现是标签的完整性除了问题
+  wrong: <url-pattern><url-pattern>
+  right: <url-pattern></url-pattern>
+
+一.HTML页面不被识别
+  在index.jsp和head.txt的开发过程中，发现超链接，h1标签等都无法被识别，都被以
+  文字的形式进行展示。
+  经过排查，发现是html的标签名与左括号必须连在一起。
+  wrong： < a>
+  right:  <a>
+
+二.提示unsupported encoding [ GB2312]
+解决办法：charset与GB2312间不能有空格
+
+三.index.jsp中文乱码问题

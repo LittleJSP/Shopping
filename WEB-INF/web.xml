@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <web-app>
-
 <servlet>
-  <servlet-name> registerServlet </servlet-name>
-  <servlet-class>myservlet.control.HandleRegister</servlet-class>
+  <servlet-name>registerServlet </servlet-name>
+  <servlet-class> myservlet.control.HandleRegister </servlet-class>
 </servlet>
 <servlet-mapping>
   <servlet-name> registerServlet</servlet-name>
@@ -16,16 +15,16 @@
 </servlet>
 <servlet-mapping>
   <servlet-name>loginServlet </servlet-name>
-  <url-pattern >/loginServlet <url-pattern>
+  <url-pattern>/loginServlet </url-pattern>
 </servlet-mapping>
 
 <servlet>
   <servlet-name>deleteServlet </servlet-name>
-  <servlet-class >myservlet.control.HandleDelete </servlet-class>
+  <servlet-class>myservlet.control.HandleDelete </servlet-class>
 </servlet>
 <servlet-mapping>
   <servlet-name> deleteServlet </servlet-name>
-  <url-pattern >/deleteServlet </url-pattern>
+  <url-pattern>/deleteServlet </url-pattern>
 </servlet-mapping>
 
 <servlet>
@@ -38,21 +37,21 @@
 </servlet-mapping>
 
 <servlet>
-  <servlet-name> namequeryServlet </servlet-name>
+  <servlet-name> queryServlet </servlet-name>
   <servlet-class> myservlet.control.QueryAllRecord </servlet-class>
 </servlet>
 <servlet-mapping>
   <servlet-name>queryServlet </servlet-name>
-  <url-pattern >/queryServlet </url-pattern>
+  <url-pattern>/queryServlet </url-pattern>
 </servlet-mapping>
 
 <servlet>
   <servlet-name> putGoodsServlet </servlet-name>
-  <servlet-class >myservlet.control.PutGoodsToCar </servlet-class>
+  <servlet-class>myservlet.control.PutGoodsToCar </servlet-class>
 </servlet>
 <servlet-mapping>
   <servlet-name> putGoodsServlet </servlet-name>
-  <url-pattern >/putGoodsServlet </url-pattern>
+  <url-pattern>/putGoodsServlet </url-pattern>
 </servlet-mapping>
 
 <servlet>
@@ -69,8 +68,7 @@
   <servlet-class>myservlet.control.HandleExit </servlet-class>
 </servlet>
 <servlet-mapping>
-  <servlet-name >exitServlet </servlet-name>
+  <servlet-name>exitServlet </servlet-name>
   <url-pattern>/exitServlet</url-pattern>
 </servlet-mapping>
-
 </web-app>
