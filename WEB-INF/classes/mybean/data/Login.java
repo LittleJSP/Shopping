@@ -1,10 +1,25 @@
-package mybean. datai
-import java.uti1.关
-public class Login I
-String logname
-backNews="未登录
-LinkedList string> cari
-public Login()(
-car new LinkedList String>i
-public void setLogname( String logname
-this. logname logname
+package mybean.data;
+import java.util.*;
+public class Login {
+String logname="",
+backNews="未登录";
+LinkedList<String> car;
+public Login(){
+car=new LinkedList<String>();
+}
+public void setLogname(String logname){
+this.logname=logname;
+}
+public String getLogname(){
+return logname;
+}
+public void setBackNews(String s){
+backNews=s;
+}
+public String getBackNews(){  
+return backNews;
+}
+public LinkedList<String> getCar(){
+return car;
+}
+}
