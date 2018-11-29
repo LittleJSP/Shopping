@@ -45,7 +45,7 @@ dispatcher.forward(request,response);
 else{
 String backNews="您输人的用户名不存在,或密码不匹配";
 //调用登录失败的方法:
-fai1(request,response,logname,backNews);
+fail(request,response,logname,backNews);
 }
 }
 else{
@@ -93,11 +93,11 @@ public void fail(HttpServletRequest request,HttpServletResponse response,
 String logname,String backNews){
 response.setContentType("text/html;charset= GB2312");
 try{
-PrintWriter out = response.getWriter();
+PrintWriter out=response.getWriter();
 out.println("<html><body>");
-out.print1n("<h2>"+logname+"登录反馈结果<br>"+backNews+"</h2>");
-out.print1n("返回登录页面或主页<br>");
-out.print1n("<a href = login.jsp>登录页面</a>");
+out.println("<h2>"+logname+"登录反馈结果<br>"+backNews+"</h2>");
+out.println("返回登录页面或主页<br>");
+out.println("<a href=login.jsp>登录页面</a>");
 out.println("<br><a href = index.jsp>主页</a>");
 out.println("</body></htm1>");
 }
