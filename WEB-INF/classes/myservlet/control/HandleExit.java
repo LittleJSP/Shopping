@@ -1,7 +1,7 @@
 package myservlet contro
 import javax. servlet. *i
 importjavax.servlet.http.*
-import java.1o.å…´
+import java.1o.ĞË
 public class Handleexit extends Httpservlet
 public void init(ServletConfig config) throws ServletException
 super init(config)i
@@ -9,9 +9,9 @@ public void dopost(hTtpservletrequest request HttpservletrespOnse
 response)throws ServletException, IOException t
 Httpsession session=request. getsession(trUe);
 session. invalidate
-//é”€æ¯ç”¨æˆ·çš„ sessionå¯¹è±¡
+//Ïú»ÙÓÃ»§µÄ session¶ÔÏó
 response. sendRedirect("index. jsp")i
-//è¿”å›ä¸»é¡µ
+//·µ»ØÖ÷Ò³
 
 
 public void doget(hTtpservletrequeSt request HttpservletresPonse

@@ -13,7 +13,7 @@ Statement sql
 ResultSet rsi
 con= DriverManager get Connection(uri);
 sql=con. createStatement()
-//è¯»å– classifyè¡¨,è·å¾—åˆ†ç±»
+//¶ÁÈ¡ classify±í,»ñµÃ·ÖÀà
 rs= sql executeQuery("SELECT* FROM classify ")i
 out. print("< form action=query Servlet' method ='post'>)i
 out. print("< select name='fenleiNumber'>")

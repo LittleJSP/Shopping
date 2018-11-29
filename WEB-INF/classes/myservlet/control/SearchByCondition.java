@@ -2,7 +2,7 @@ package myservlet control
 import mybean. data. DataByeage
 import com. sun rowset. * i
 import java. sql.*i
-import Java.10.ç±³
+import Java.10.Ã×
 import javax. servlet.*
 importjavax.servlethttp.*i
 public class Searchbycondition extends Httpservleti
@@ -21,7 +21,7 @@ request setCharacterEncoding("gb2312")
 String searchLess= request getParameter("searchLess")
 String radioMess= request getParameter("radio")
 if(searchLess ==null searchLess length()==0)
-fail( request, response,"æ²¡æœ‰æŸ¥è¯¢ä¿¡æ¯,æ— æ³•æŸ¥è¯¢");
+fail( request, response,"Ã»ÓĞ²éÑ¯ĞÅÏ¢,ÎŞ·¨²éÑ¯");
 return
 String condition=i
 if(radioMess equals("cosmetic number"))i
@@ -35,22 +35,22 @@ String regex="[^0123456789.]";
 String[ priceMess searchMess split(regex)
 if(priceLess length==1)
 max =min Double parseDouble(priceLess[ o])i
-eâŠ¥se
+e¡Íse
 f(priceLess length == 2)
 min= Double. parseDouble(priceLess[O])
 max= Double. parseDoublepriceLess[1]);
 if(max min)
 double t = max
 in t
-ä»
-åˆ°
+´Ó
+µ½
 else i
-fail( request, response,"è¾“å…¥çš„ä»·æ ¼æ ¼å¼æœ‰é”™è¯¯");
+fail( request, response,"ÊäÈëµÄ¼Û¸ñ¸ñÊ½ÓĞ´íÎó");
 return;
 condition =SELECT FROM cosmeticForm where+
 "cosmetic_price <= max+ AND cosmetic_price>=+min i
 Httpsession session request getsession(True);
-å•è¡Œèµ„
+µ¥ĞĞ×Ê
 Connection con null
 DataBy Page dataBean= null;
 dataBean=(DataByPage)session. getAttribute("dataBean"
@@ -60,7 +60,7 @@ dataBean=(DataByPage)session. getAttribute("dataBean"
 
 f( dataBean ==nu
 dataBean new DataBy Page()
-//åˆ›å»º Javabeanå¯¹è±¡
+//´´½¨ Javabean¶ÔÏó
 ession setAttribute("dataBean" data
 catch( Exception exp
 dataBean new DataByPage )i
@@ -74,15 +74,15 @@ sql=con. createStatement( ResultSet. TYPE SCROLL SENSITIVE,
 Resultset CONCUR READ ONLY)
 ResultSet rs= sql executeQuery( condition)
 rowSet= new CachedRowSetImp1();
-//åˆ›å»ºè¡Œé›†å¯¹è±¡
+//´´½¨ĞĞ¼¯¶ÔÏó
 Set populate(rs)i
 dataBean. setRowSet (rowSet);
-//è¡Œé›†æ•°æ®å­˜å‚¨åœ¨ dataBeanä¸­
+//ĞĞ¼¯Êı¾İ´æ´¢ÔÚ dataBeanÖĞ
 con. close();
-/å…³é—­è¿æ¥
+/¹Ø±ÕÁ¬½Ó
 catch( SQLException exp)I
 response. sendRedirect("byPage Show jsp")
-//é‡å®šå‘åˆ° by Pageshow.jsp
+//ÖØ¶¨Ïòµ½ by Pageshow.jsp
 public void doget(hTtpservletreqUest request HttpservletresPonse
 response) throws ServletException, IOExceptionI
 doPost(request, response)
@@ -91,7 +91,7 @@ response.setContentType("text/html; charset= GB2312")
 PrintWriter out= response. getWriter();
 out println("<html > body>")
 outprintln("<h2>+ back News +</h2>")
-out. println("è¿”å›:")
-out. println("< a href= searchCosmetic.jsp>æŸ¥è¯¢åŒ–å¦†å“</a>");
+out. println("·µ»Ø:")
+out. println("< a href= searchCosmetic.jsp>²éÑ¯»¯×±Æ·</a>");
 out println("</body ></htm1>")
 catch(IOException exp)(unn-0At

@@ -1,34 +1,34 @@
 <% page content Type="text/html;charset=gb2312"%>
 <% page import="mybean. data. Login"%>
 <% page import ="javautil.*
-å·>
+ºÅ>
 <isp: useBean id= nloginBean"class= mybean. data. Login" scope="session"/>
-<mML><EAD><å·@ include file="head.txtâ€å·></EAD>E(E
+<mML><EAD><ºÅ@ include file="head.txt¡±ºÅ></EAD>E(E
 BODY background= image/back. jpg >< font size=2>
 <div align="center">
 < if(loginBean == null)(
-çš„
-response. sendRedirect(Â°gin.jspy))/é‡å®šå‘åˆ°ç™»å½•é¡µé¢
+µÄ
+response. sendRedirect(¡ãgin.jspy))/ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
 else I
-11v9)ç©ºE,,61
+11v9)¿ÕE,,61
 boolean b =loginBean getLogname()==null l
 loginBean. getLogname(). length()==0
 f(b)
-æ˜¯
-response. sendRedirect(" login. jsp")/é‡å®šå‘åˆ°ç™»å½•é¡µé¢æ–‡ç½®
+ÊÇ
+response. sendRedirect(" login. jsp")/ÖØ¶¨Ïòµ½µÇÂ¼Ò³ÃæÎÄÖÃ
 LinkedList car= loginBean getCar()i
 if(car==null)
-out. print("<h2>è´­ç‰©è½¦æ²¡æœ‰ç‰©å“.</h2>")
+out. print("<h2>¹ºÎï³µÃ»ÓĞÎïÆ·.</h2>")
 lse i
 Iterator String> iterator= car. iterator ()i
 StringBuffer buyGoods= new StringBuffer()i
 int n=0:
 double priceSum =0;
-out. print("è´­ç‰©è½¦ä¸­çš„ç‰©å“:< table border=2>");
+out. print("¹ºÎï³µÖĞµÄÎïÆ·:< table border=2>");
 while(iterator hasNext())(
 String goods =iterator. next()i
 String showGoods
-//è´­ç‰©è½¦ç‰©å“çš„åç¼€æ˜¯â€#ä»·æ ¼æ•°å­—",æ¯”å¦‚â€åŒ–å¦†å“ä»·æ ¼3989#3989
+//¹ºÎï³µÎïÆ·µÄºó×ºÊÇ¡±#¼Û¸ñÊı×Ö",±ÈÈç¡±»¯×±Æ·¼Û¸ñ3989#3989
 int index= goods. lastIndexOf("#")i
 
 
@@ -38,9 +38,9 @@ if(index=-1)
 priceSum+=Double. parseDouble( goods. substring( index +1))i
 showGoods goods substring(, index)
 buyGoods. append (n+ :+ showGoods)i
-æ˜¯,å•å¤š String del="< form action=' deleteServlet' method=post">"+
+ÊÇ,µ¥¶à String del="< form action=' deleteServlet' method=post">"+
 input type ='hidden'name='delete' value =" goods+">
-"+"< input type=' submit! value='åˆ é™¤â€™></form>
+"+"< input type=' submit! value='É¾³ı¡¯></form>
 out. print("<tr>< td>+ showGoods +"</td>")
 at print("<td>+ del+"<td></tr
 out. print("</table>")
@@ -48,7 +48,7 @@ String orderForm"<form action='buyServlet' method=,post>"+
 w <input type ='hidden'name ='buy' value =" buyGoods+">+
 n input type ='hidden' name='price' value= m+priceSum+>+
 put type =submit val
-ç”Ÿæˆè®¢å•"></for
+Éú³É¶©µ¥"></for
 t print(order Form)
 8>
 </div></font>

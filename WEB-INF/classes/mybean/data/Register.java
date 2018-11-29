@@ -1,6 +1,6 @@
 package mybean.data;
 public class Register{
-	String logname="",phone="",address="",realname="",backNews="è¯·è¾“å…¥ä¿¡æ¯";
+	String logname="",phone="",address="",realname="",backNews="ÇëÊäÈëĞÅÏ¢";
 	public void setLogname(String logname){
 		this.logname=logname;
 	}

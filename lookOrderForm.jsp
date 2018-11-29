@@ -3,20 +3,20 @@ jsp: useBean id="loginBean"class="mybean. data. Login"scope="session"/>
 <s@ page import=java. sql*"%>
 <HIML>< HEAD><% include file="head. txt"%></HEAD>
 BODY background= image/back. jpg>
-æ—¶).,0
+Ê±).,0
 <div align="center
 <s if(loginBean== null)
 response. sendRedirect("login. jsp")
-/é‡å®šå‘åˆ°ç™»å½•é¡µé¢
+/ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
 else
-)åšCP,0
+)×öCP,0
 boolean b loginBean getLogname()== null I
 oginBean. getLogname(). length()==0;
 if(b)
 response. sendRedirect("login. jsp");
-//é‡å®šå‘åˆ°ç™»å½•é¡µé¢
+//ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
 Connection con;
-å‡º010
+³ö010
 Statement sql;
 sultset rsi
 yI Class for Name("com mysql jdbc Driver");
@@ -31,9 +31,9 @@ loginBean getLogname()+"'";
 rs= sql executeQuery( cdn);
 out. print("< table border =2>");
 out. print("<tr>)i
-out. print("< th width=100>+"è®¢å•å·");
-aout. print("< th width=100>"+"ä¿¡æ¯");
-out. print("< th width=100>"+"ä»·æ ¼");
+out. print("< th width=100>+"¶©µ¥ºÅ");
+aout. print("< th width=100>"+"ĞÅÏ¢");
+out. print("< th width=100>"+"¼Û¸ñ");
 
 
 

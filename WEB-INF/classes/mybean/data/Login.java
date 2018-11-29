@@ -2,7 +2,7 @@ package mybean.data;
 import java.util.*;
 public class Login {
 String logname="",
-backNews="未登录";
+backNews="干什么嘛";
 LinkedList<String> car;
 public Login(){
 car=new LinkedList<String>();
@@ -16,7 +16,7 @@ return logname;
 public void setBackNews(String s){
 backNews=s;
 }
-public String getBackNews(){  
+public String getBackNews(){
 return backNews;
 }
 public LinkedList<String> getCar(){

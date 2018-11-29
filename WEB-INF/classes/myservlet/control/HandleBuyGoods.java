@@ -2,7 +2,7 @@ package myservlet. control;
 import mybean. data. Login;
 import java. sql.*
 import java.util.*
-import java.io.å…´;
+import java.io.ĞË;
 import javax. servlet
 importjavax.servlet.http.*
 oublic class Handlebuygoods extends Httpservlet (
@@ -17,7 +17,7 @@ response) throws ServletException, IOException I
 request setCharacterEncoding(gb2312")
 String buyGoodsMess request getParameter("buy");
 if(buyGoodsMess ==null l buy GoodsMess length()==0)I
-fai1( request, response,"è´­ç‰©è½¦æ²¡æœ‰ç‰©å“,æ— æ³•ç”Ÿæˆè®¢å•");
+fai1( request, response,"¹ºÎï³µÃ»ÓĞÎïÆ·,ÎŞ·¨Éú³É¶©µ¥");
 return;
 
 
@@ -25,7 +25,7 @@ return;
 
 String price request getParameter("price")
 if(price==null price. length()==0)(
-fai1( request, response,"æ²¡æœ‰è®¡ç®—ä»·æ ¼å’Œ,æ— æ³•ç”Ÿæˆè®¢å•");
+fai1( request, response,"Ã»ÓĞ¼ÆËã¼Û¸ñºÍ,ÎŞ·¨Éú³É¶©µ¥");
 float sum= Float parseFloat(price)
 Login loginBean= null;
 Httpsession sessions request getsession(true)i
@@ -33,10 +33,10 @@ tryi loginBean=(Login)session. getAttribute("loginBean")
 boolean b=loginBean getLogname()==null ll
 loginBean. getLogname(). length()==0;
 f(b)
-response. sendRedirect("1ogin.jsp");//é‡å®šå‘åˆ°ç™»å½•é¡µé¢
+response. sendRedirect("1ogin.jsp");//ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
 catch( Exception exp)t
 response. sendRedirect("login. jsp")i
-//é‡å®šå‘åˆ°ç™»å½•é¡µé¢
+//ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
 String uri="jdbc: mysql: //127.0.0. 1/shop?"+
 user root&password &character Encoding gb2312"i
 Connection con;
@@ -45,18 +45,18 @@ try[ con= DriverManager get Connection(uri)
 String insertCondition="INSERT INTO orderform VALUES(?,?,?,?)"i
 sql= con. prepareStatement(insertCondition)i
 sql setInt(1, 0);
-//è®¢å•åºå·ä¼šè‡ªå®šå¢åŠ 
+//¶©µ¥ĞòºÅ»á×Ô¶¨Ôö¼Ó
 sql setString(2, loginBean. getLogname())i
 String(3, buyGoodsMess)
 sql setFloat(4, sum)
 sql executeUpdate()
 LinkedList car loginBean. getCar();
-car.câŠ¥ear
+car.c¡Íear
 ()
-//æ¸…ç©ºè´­ç‰©è½¦
-success( request, response,"ç”Ÿæˆè®¢å•æˆåŠŸ");
+//Çå¿Õ¹ºÎï³µ
+success( request, response,"Éú³É¶©µ¥³É¹¦");
 catch(SQLException exp)(
-fai1( request, response,"ç”Ÿæˆè®¢å•å¤±è´¥"+exp);
+fai1( request, response,"Éú³É¶©µ¥Ê§°Ü"+exp);
 public void doget(hTtpservletreQuest request HttpservletreSponse
 response) throws ServletException, IOException
 doPost(
@@ -67,14 +67,14 @@ PrintWriter out = re
 se. getWriter()
 out println("<html > body >)i
 t println("<h2>"+ back News +</h2>")
-ln("è¿”å›ä¸»é¡µ");
-out. println("< a href= index.jsp>ä¸»é¡µ</a>");
-("<br>æŸ¥çœ‹è®¢å•")
+ln("·µ»ØÖ÷Ò³");
+out. println("< a href= index.jsp>Ö÷Ò³</a>");
+("<br>²é¿´¶©µ¥")
 
 
 
 
-out. println("< a href= lookOrderForm.jsp>æŸ¥çœ‹è®¢å•<a>");
+out. println("< a href= lookOrderForm.jsp>²é¿´¶©µ¥<a>");
 out println("</body ></html>")
 catch(IOException exp
 publicvoidfail(httpservletreQuestrequestHttpservletrespOnseresponse
@@ -86,7 +86,7 @@ PrintWriter out= response. getWriter
 ();
 out println("<html >< body >")
 out println(< h2>+ backNews +"</h2>")
-out. print1n("è¿”å›ä¸»é¡µ:");
-out. println("< a href= index.jsp>ä¸»é¡µ</a>");
+out. print1n("·µ»ØÖ÷Ò³:");
+out. println("< a href= index.jsp>Ö÷Ò³</a>");
 out println("</body ></html>")
 catch(IOException exp)()

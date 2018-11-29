@@ -1,14 +1,14 @@
 package myservlet. control;
 import mybean. data. Login;
-import java.uti1.å¤´
-mport java.io.ç±³
+import java.uti1.Í·
+mport java.io.Ã×
 import javax. servlet. *i
 importjavax.servlethttp.*i
 public class PutgoodstocAr extends Httpservlet
 public void init(ServletConfig config) throws ServletException I
 super init(config)
 public void dopost(HttpservletrequEst request HttpservletreSponse
-2æœ‹,
+2Åó,
 response) throws ServletException, IOException
 
 
@@ -23,13 +23,13 @@ boolean b= loginBean getLogname ()== null ll
 loginBean. getLogname(). length()==0
 if(b)
 response. sendRedirect("login. jsp
-);//é‡å®šå‘åˆ°ç™»å½•é¡µé¢
+);//ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
 LinkedList< String> car loginBean getCar();
 car. add( goods )i
 speak SomeMess(request, response, goods)
 catch(Exception exp)t
 response. sendRedirect("login. jsp");
-//é‡å®šå‘åˆ°ç™»å½•é¡µé¢
+//ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
 public void doget(HttpservletreQuest request HttpservletrEsponse
 response) throws ServletException, IOException f
 doPost(request, response)i
@@ -42,10 +42,10 @@ PrintWriter out =response. ge
 out.print("<%@ include file='head. txt%></HEAD>)i
 out println("<htm1 ><bo
 t println(<h2>+ go
-æ”¾å…¥è´­ç‰©è½¦</h2>
-out. print1n("æŸ¥çœ‹è´­ç‰©è½¦æˆ–è¿”å›æµè§ˆåŒ–å¦†å“<br>");
-out. println("< a href=1 ook ShoppingCart.jp>æŸ¥çœ‹è´­ç‰©è½¦</a>")
-out.pint1n("<br>< a href= byPageshow.3p>æµè§ˆåŒ–å¦†å“</a>");
+·ÅÈë¹ºÎï³µ</h2>
+out. print1n("²é¿´¹ºÎï³µ»ò·µ»Øä¯ÀÀ»¯×±Æ·<br>");
+out. println("< a href=1 ook ShoppingCart.jp>²é¿´¹ºÎï³µ</a>")
+out.pint1n("<br>< a href= byPageshow.3p>ä¯ÀÀ»¯×±Æ·</a>");
 out. p
 ("</hoy></htm>");
 tch(IOException exp)F

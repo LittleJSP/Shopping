@@ -4,15 +4,15 @@
 <BODY background=image/back.jpg> <font size = 2>
 < div  align = " center " >
 <table border = 2>
-<tr><th>登录</th></tr>
+<tr><th>��¼</th></tr>
 <FORM action ="loginServlet" Method ="post">
-<tr> <td>登录名称：<Input type=text name="logname"> </td> </tr>
-<tr> <td>输入密码：<Input type=password name="password"> </td > </tr>
+<tr> <td>��¼���ƣ�<Input type=text name="logname"> </td> </tr>
+<tr> <td>�������룺<Input type=password name="password"> </td > </tr>
 </table>
-<Input type=submit name="g" value ="提交">
+<Input type=submit name="g" value ="�ύ">
 </form> </div>
 <div align ="center">
-登录反馈信息：<jsp:getProperty name = "loginBean" property ="backNews"/>
-<br>登录名称：<jsp:getProperty name= "loginBean" property="logname" />
+��¼������Ϣ��<jsp:getProperty name = "loginBean" property ="backNews"/>
+<br>��¼���ƣ�<jsp:getProperty name= "loginBean" property="logname" />
 <div> </font>
 </BODY> </HTML>

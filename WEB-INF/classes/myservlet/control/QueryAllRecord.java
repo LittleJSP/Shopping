@@ -1,7 +1,7 @@
 package myservlet control
 import mybean. data. DataByPage;
 Import com. sun. rowset.*
-import java.sq1.å…´
+import java.sq1.ĞË
 mport java. io
 import javax. servlet.*
 importjavax.servlethttp.*i
@@ -29,7 +29,7 @@ Y
 dataBean=(DataByPage)session. getAttribute("dataBean")i
 f(dataBean
 dataBean= new DataBy Page()i
-//åˆ›å»º Javabeanå¯¹è±¡
+//´´½¨ Javabean¶ÔÏó
 session. setAttribute("dataBean", dataBean)i
 catch(Exception exp)
 dataBean new DataByPage i
@@ -41,14 +41,14 @@ Statement sql= con. createStatement(ResultSet TYPE_ wo
 SCROLL SENSITIVE, ResultSet CONCUR_ READ_ ONLY)i
 Resultset rs= sql executeQuery("SELECT FROM cosmeticForm where id ="+id)
 rowSet=new CachedRowSetImp1()
-//åˆ›å»ºè¡Œé›†å¯¹è±¡
+//´´½¨ĞĞ¼¯¶ÔÏó
 rowSet. populate(rs)
 dataBean. setRowSet(rowSet)
-//è¡Œé›†æ•°æ®å­˜å‚¨åœ¨ dataBeanä¸­
+//ĞĞ¼¯Êı¾İ´æ´¢ÔÚ dataBeanÖĞ
 con. close()i
-/å…³é—­è¿æ¥
+/¹Ø±ÕÁ¬½Ó
 catch(SQLException exp
-response. sendRedirect(" byPageshow.jsp");//é‡å®šå‘åˆ° byPageshow.jsp
+response. sendRedirect(" byPageshow.jsp");//ÖØ¶¨Ïòµ½ byPageshow.jsp
 public void doget(hTtpservletrequEst request htTpservletrespoNse
 response)throws ServletException, IOException(
 doPost(request, response);

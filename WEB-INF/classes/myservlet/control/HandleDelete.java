@@ -1,8 +1,8 @@
 package myservlet control
 import mybean. data. Login;
-import java.uti1.ä¸º;
-import java.io.ç±³
-ä¸­
+import java.uti1.Îª;
+import java.io.Ã×
+ÖĞ
 import javax. servlet. *i
 importjavax.servlethttp.*i
 public class Handledelete extends Httpservlet
@@ -21,16 +21,16 @@ try loginBean=(Login)session. getAttribute("loginBean")i
 boolean b= loginBean getLogname()==null l
 loginBean. getLogname (). length()==0;
 if(b)
-response. sendRedirect(" login.jsp");//é‡å®šå‘åˆ°ç™»å½•é¡µé¢
+response. sendRedirect(" login.jsp");//ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
 LinkedList String> car= loginBean. getCar()i
 car. remove( delete
 catch( Exception exp)t
 response. sendRedirect("login. jsp")i
-//é‡å®šå‘åˆ°ç™»å½•é¡µé¢
+//ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
 RequestDispatcher dispatcher
 request getRequestDispatcher("look ShoppingCar jsp");
 dispatcher. forward (request, response)
-//è½¬å‘
+//×ª·¢
 response)throws ServletException, IOException/vletResponse
 public void doget(hTtpservletreqUest request Httpse
 doPost(request, response)i

@@ -35,7 +35,7 @@ public class HandleRegister extends HttpServlet{
 		if(password==null)
         password="";
 		if(!password.equals(again_password)){
-			userBean.setBackNews("ä¸¤æ¬¡å¯†ç ä¸åŒï¼Œæ³¨å†Œå¤±è´¥,");
+			userBean.setBackNews("Á½´ÎÃÜÂë²»Í¬£¬×¢²áÊ§°Ü,");
 			RequestDispatcher dispatcher=request.getRequestDispatcher("inputRegisterMess.jsp");
 			dispatcher.forward(request,response);
 			return;
@@ -54,12 +54,12 @@ public class HandleRegister extends HttpServlet{
 		if(boo)
 		{sql.setString(1,handleString(logname));
 		 sql.setString(2,handleString(password));
-     sql.setString(3,handleString(phone));		
+     sql.setString(3,handleString(phone));
      sql.setString(4,handleString(address));
      sql.setString(5,handleString(realname));
 		int m=sql.executeUpdate();
 		if (m!=0){
-			backNews="æ³¨å†ŒæˆåŠŸ";
+			backNews="×¢²á³É¹¦";
 			userBean.setBackNews(backNews);
 			userBean.setLogname(logname);
 			userBean.setPhone(handleString(phone));
@@ -68,13 +68,13 @@ public class HandleRegister extends HttpServlet{
 		  }
 		}
 		else{
-			backNews="ä¿¡æ¯å¡«å†™ä¸å®Œæ•´æˆ–åå­—ä¸­æœ‰éæ³•å­—ç¬¦";
+			backNews="ĞÅÏ¢ÌîĞ´²»ÍêÕû»òÃû×ÖÖĞÓĞ·Ç·¨×Ö·û";
 			userBean.setBackNews(backNews);
 		}
 		con.close();
 		}
 		catch(SQLException exp){
-			backNews="è¯¥ä¼šå‘˜åå·²è¢«ä½¿ç”¨ï¼Œè¯·æ‚¨æ›´æ¢åå­—" + exp;
+			backNews="¸Ã»áÔ±ÃûÒÑ±»Ê¹ÓÃ£¬ÇëÄú¸ü»»Ãû×Ö" + exp;
 			userBean.setBackNews(backNews);
 		}
 		RequestDispatcher dispatcher=request.getRequestDispatcher("inputRegisterMess.jsp");

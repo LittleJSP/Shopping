@@ -9,17 +9,17 @@ de file="h
 HTML > Body background= image/back. jpg><center>
 if(loginBean==null)(
 response. sendRedirect("login. jsp");
-é‡å®šå‘åˆ°ç™»å½•é¡µé¢
+ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
 se
 boolean b= loginBean getLogname()==null l
 loginBean. getLogname(). length()==0;
 f(b)
-response. sendRedirect("1ogin.jsp");//é‡å®šå‘åˆ°ç™»å½•é¡µé¢
+response. sendRedirect("1ogin.jsp");//ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
 }
 String numberID= request getParameter("xijie")
-out. print("<th>äº§å“å·"+ numberID);
+out. print("<th>²úÆ·ºÅ"+ numberID);
 if(numberID== null)(
-out. print("æ²¡æœ‰äº§å“å·,æ— æ³•æŸ¥çœ‹ç»†èŠ‚");
+out. print("Ã»ÓĞ²úÆ·ºÅ,ÎŞ·¨²é¿´Ï¸½Ú");
 Connection con;
 Statement sq
 ResultSet rs;
@@ -38,11 +38,11 @@ SELECT* FROM cosmeticForm where cosmetic number =' number ID +1"
 rs= sql executeQuery( cdn)i
 out. print("< table border=2>)
 out. print("<tr>)
-out. print("<th>äº§å“å·");
-out. print("<th>åç§°");
-out. print("<th>åˆ¶é€ å•†");
-out. print("<th>ä»·æ ¼");
-out. print("<th>< font color=blue>æ”¾å…¥è´­ç‰©è½¦</font>")
+out. print("<th>²úÆ·ºÅ");
+out. print("<th>Ãû³Æ");
+out. print("<th>ÖÆÔìÉÌ");
+out. print("<th>¼Û¸ñ");
+out. print("<th>< font color=blue>·ÅÈë¹ºÎï³µ</font>")
 out. print("</TR>")
 String picture="welcome. jpg
 String detailMess
@@ -53,12 +53,12 @@ String maker =rs getString(3);
 String price= rs getString(4);
 detailMess=rs getString(5)
 picture=rs getString(6);
-//ä¾¿äºè´­ç‰©è½¦è®¡ç®—ä»·æ ¼,å°¾ç¼€ä¸Šâ€#ä»·æ ¼å€¼
+//±ãÓÚ¹ºÎï³µ¼ÆËã¼Û¸ñ,Î²×ºÉÏ¡±#¼Û¸ñÖµ
 String goods =(" number +"," name +"," maker +"," price+)#+pricei
 goods= goods. replaceAll("\\pfBlank)","")
 String button=<form. action='put Goods Servlet,'method = 'post>+
 <input type ='hidden' name=' value="+ goods+">"+
-< input type=' submit' value='æ”¾å…¥è´­ç‰©è½¦></form>";
+< input type=' submit' value='·ÅÈë¹ºÎï³µ></form>";
 out. print("<tr>)
 out. print("<td>+ number +"</td>")
 t print("<td>+
@@ -68,11 +68,11 @@ out. print("<td>"+ price +"</td>")
 t print("< td> button +"</td>
 out. print("</tr>")
 out. print("</table>")
-out. print("äº§å“è¯¦æƒ…:<br>");
+out. print("²úÆ·ÏêÇé:<br>");
 out println("<div align= center >"+ detailMess +"<div>")
 String pic ="<img src=.image/"+ picture +" width= 260 height =200 ><>";
 (pic)i
-/äº§å“å›¾ç‰‡
+/²úÆ·Í¼Æ¬
 con. close()
 catch( SQLException exp)Ih
 8>

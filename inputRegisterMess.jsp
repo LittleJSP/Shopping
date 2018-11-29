@@ -1,38 +1,38 @@
 <%@ page contentType="text/html;charset=gb2312" %>
 <jsp:useBean id="userBean" class="mybean.data.Register" scope="request" />
 <HEAD><%@ include file="head.txt" %></HEAD>
-<title>注册页面</title>
+<title>ע��ҳ��</title>
 <HTML><BODY background=image/back.jpg><Font size=2>
 <div align="center">
 <FORM action="registerServlet" method="post" name=form>
 <table>
-用户名由字母、数字、下划线构成，*注释的项必须填写
-<tr><td>*用户名称：</td>
+�û�������ĸ�����֡��»��߹��ɣ�*ע�͵��������д
+<tr><td>*�û����ƣ�</td>
     <td><input type=text name="logname" ></td>
-    <td>*用户密码：</td>
+    <td>*�û����룺</td>
     <td><input type=password name="password"></td>
 </tr>
-<tr><td>*重复密码：</td>
+<tr><td>*�ظ����룺</td>
     <td><input type=password name="again_password"></td>
-    <td>联系电话：</td>
+    <td>��ϵ�绰��</td>
     <td><input type=text name="phone"></td>
 </tr>
 <tr>
-    <td>邮寄地址：</td><td><input type=text name="address"></td>
-    <td>真实姓名：</td><td><input type=text name="realname"></td>
-    <td><input type=submit name="g" value="提交"></td>
+    <td>�ʼĵ�ַ��</td><td><input type=text name="address"></td>
+    <td>��ʵ������</td><td><input type=text name="realname"></td>
+    <td><input type=submit name="g" value="�ύ"></td>
 </tr></table></Form></div>
 <div align="center">
-<p>注册反馈：
+<p>ע�ᷴ����
 <jsp:getProperty name="userBean" property="backNews"/>
 <table border=3>
-<tr><td>会员名称：</td>
+<tr><td>��Ա���ƣ�</td>
 <td><jsp:getProperty name="userBean" property="logname" /></td></tr>
-<tr><td>姓名：</td>
+<tr><td>������</td>
 <td><jsp:getProperty name="userBean" property="realname" /></td></tr>
-<tr><td>地址：</td>
+<tr><td>��ַ��</td>
 <td><jsp:getProperty name="userBean" property="address" /></td></tr>
-<tr><td>电话：</td>
+<tr><td>�绰��</td>
 <td><jsp:getProperty name="userBean" property="phone" /></td></tr>
 </table></div>
 </Body></HTML>

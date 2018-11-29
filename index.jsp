@@ -1,9 +1,9 @@
 <%@ page contentType ="text/html;charset=gb2312" %>
 <HTML> <BODY>
 <HEAD><%@ include file="head.txt" %></HEAD>
-<title>é¦–é¡µ</title>
+<title>Ê×Ò³</title>
 <CENTER> <h1><font size= 4 color= blue>
-  æ¬¢è¿Žå…‰ä¸´"é’å±±ä¸è€ç»¿æ°´æ— å¿§"åŒ–å¦†å“é”€å”®ç½‘
+  »¶Ó­¹âÁÙ"ÇàÉ½²»ÀÏÂÌË®ÎÞÓÇ"»¯×±Æ·ÏúÊÛÍø
 </font></h1>
 <img src="image/welcome.jpg" width=600 height=200 ></img>
 </CENTER>

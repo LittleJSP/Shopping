@@ -1,13 +1,13 @@
 package mybean. datai
 import com. sun rowset. * i
 public class DataByPage
-//å­˜å‚¨è¡¨ä¸­å…¨éƒ¨è®°å½•çš„è¡Œé›†å¯¹è±¡
+//´æ´¢±íÖĞÈ«²¿¼ÇÂ¼µÄĞĞ¼¯¶ÔÏó
 CachedRowSetImpl rowSet nulli
-//æ¯é¡µæ˜¾ç¤ºçš„è®°å½•æ•°
+//Ã¿Ò³ÏÔÊ¾µÄ¼ÇÂ¼Êı
 Int pageSize=1
-//åˆ†é¡µåçš„æ€»é¡µæ•°
+//·ÖÒ³ºóµÄ×ÜÒ³Êı
 int totalPages=1;
-//å½“å‰æ˜¾ç¤ºé¡µ
+//µ±Ç°ÏÔÊ¾Ò³
 Int currentPage =1;
 public void setRowSet( CachedRowSetImpl set)f
 rowSet= set
