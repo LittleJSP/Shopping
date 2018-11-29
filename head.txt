@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=utf-8" %>
+<%@ page contentType="text/html;charset=gb2312" %>
 <div align="center">
 <Font color=red><H3>"青山不老绿水无忧"化妆品销售网</H3></Font>
 <table cellSpacing =“1”cellPadding =“1”width =“660”align =“center”border =“0”>

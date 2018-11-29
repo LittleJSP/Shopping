@@ -1,4 +1,4 @@
-<%@ page contentType = "text/html;charset=utf-8" %>
+<%@ page contentType = "text/html;charset=gb2312" %>
 <jsp:useBean id = "loginBean" class= "mybean.data.Login" scope= "session"/>
 <HTML><HEAD><%@ include file ="head.txt" %> </HEAD>
 <BODY background=image/back.jpg> <font size = 2>

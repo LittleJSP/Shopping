@@ -1,4 +1,4 @@
-<% page contentType ="text/html; charset=utf-8"%>
+<% page contentType ="text/html; charset=gb2312"%>
 <% page import="java. sql*"%>
 <HTML ><HEAD><% include file="head. txt 3></HEAD>
 BODY background=image/back. Jpg > font size=2>

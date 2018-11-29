@@ -1,4 +1,4 @@
-<8@ page contentType="text/html; charset=utf-8"8>
+<8@ page contentType="text/html; charset=gb2312"8>
 <80 page import="mybean. data. DataBy Page"%>
 ks@ page import="com. sun rowset. *"s>
 <jsp: useBean id="dataBean'"

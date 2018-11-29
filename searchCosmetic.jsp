@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=GB2312"%>
+<%@ page contentType="text/html;charset=gb2312"%>
 <HTML > HEAD><% include file="head. txt"%></HEAD>
 <BODY background= image/back. jpg > font size=2>
 <div align=center>

@@ -1,4 +1,4 @@
-<% page content Type="text/html;charset=utf-8"%>
+<% page content Type="text/html;charset=gb2312"%>
 <% page import="mybean. data. Login"%>
 <% page import ="javautil.*
 号>

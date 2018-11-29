@@ -36,6 +36,3 @@
 <td><jsp:getProperty name="userBean" property="phone" /></td></tr>
 </table></div>
 </Body></HTML>
-
-
-

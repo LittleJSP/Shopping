@@ -1,4 +1,4 @@
-<%@ page content Type="text/html;charset=utf-8"%>
+<%@ page content Type="text/html;charset=gb2312"%>
 jsp: useBean id="loginBean"class="mybean. data. Login"scope="session"/>
 <s@ page import=java. sql*"%>
 <HIML>< HEAD><% include file="head. txt"%></HEAD>
