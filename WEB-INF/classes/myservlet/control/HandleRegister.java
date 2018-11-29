@@ -19,7 +19,7 @@ public class HandleRegister extends HttpServlet{
 		return s;
 	}
 	public void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
-		String uri="jdbc:mysql://127.0.0.1/shop?"+"user=root&password=&characterEncoding=gb2312";
+		String uri="jdbc:mysql://127.0.0.1/shop?"+"user=root&password=&characterEncoding=gb2312&serverTimezone=UTC";
 		Connection con;
 		PreparedStatement sql;
 		Register userBean=new Register();
