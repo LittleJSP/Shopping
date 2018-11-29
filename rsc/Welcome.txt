@@ -1,6 +1,6 @@
-大家好哦.
-接下来几周，需要大家共同合作完成JSP的课程设计啦。
-不管大家以的编程经历如何，我相信大家都有设计出优秀程序的潜力，大家一定能设计出非常非常棒的网站的。QAQ
+��Һ�Ŷ.
+���������ܣ���Ҫ��ҹ�ͬ�������JSP�Ŀγ��������
+���ܴ���Եı�̾�����Σ������Ŵ�Ҷ�����Ƴ���������Ǳ�������һ������Ƴ��ǳ��ǳ�������վ�ġ�QAQ
 
 I think you guys must have other important jobs to do except this project.
 So my plan A is to build a simple E-Commerce website to accomplish the basic requirements of the teacher.
@@ -9,32 +9,32 @@ It won't be hard because the Chapter 10 of the textbook do conclude all the code
 When the plan A is over.
 Its up to you guys to do some more chanllenging jobs or not.
 
-Anyway, have a good time~  
+Anyway, have a good time~
 ---------------------------------------------------------------------------------------------------------------------------------------
-任务1 ：11.20- 11.27
-概要：掌握 Github网站和桌面版的基本使用， 代码编辑器Atom的基本使用。
+����1 ��11.20- 11.27
+��Ҫ������ Github��վ�������Ļ���ʹ�ã� ����༭��Atom�Ļ���ʹ�á�
 
-Github桌面版下载：https://desktop.github.com     进去后点那个紫色按钮（download for Windows）就好了。
-Atom编辑器下载：https://pan.baidu.com/s/1gXQIHRzq-dVy14V1VQJo0w   我上传到网盘了，七天后失效。/ 或者官网https://atom.io 里面下载也可以。
+Github��������أ�https://desktop.github.com     ��ȥ����Ǹ���ɫ��ť��download for Windows���ͺ��ˡ�
+Atom�༭�����أ�https://pan.baidu.com/s/1gXQIHRzq-dVy14V1VQJo0w   ���ϴ��������ˣ������ʧЧ��/ ���߹���https://atom.io ��������Ҳ���ԡ�
 
-——GitHub网站
-这是一个帮助我们进行协同开发的软件，它本身是一个存放代码的地方，能够记录代码的历代版本。
-通过GitHub，我们可以编写各自负责的部分代码，然后整合到一块，大家的进展都是透明的。
+����GitHub��վ
+����һ���������ǽ���Эͬ��������������������һ����Ŵ���ĵط����ܹ���¼����������汾��
+ͨ��GitHub�����ǿ��Ա�д���Ը���Ĳ��ִ��룬Ȼ�����ϵ�һ�飬��ҵĽ�չ����͸���ġ�
 
-但第一次接触这个软件，大家需要花一定的时间去了解他的功能，如何使用。（除了程序项目，GitHub还有很多很多其他方面的用途的）
-教程链接：https://blog.csdn.net/qq_35246620/article/details/66973794
-大家只要看里面  目录部分的1-4篇，还有译文部分的2篇， 就可以了。
-一定要注册一个Github账户，边看边跟着教程操作哦。
+����һ�νӴ���������������Ҫ��һ����ʱ��ȥ�˽����Ĺ��ܣ����ʹ�á������˳�����Ŀ��GitHub���кܶ�ܶ������������;�ģ�
+�̳����ӣ�https://blog.csdn.net/qq_35246620/article/details/66973794
+���ֻҪ������  Ŀ¼���ֵ�1-4ƪ���������Ĳ��ֵ�2ƪ�� �Ϳ����ˡ�
+һ��Ҫע��һ��Github�˻����߿��߸��Ž̳̲���Ŷ��
 
-——Atom
-这个就是写代码的地方，JSP，java文件都在这里写就好了。
-我们把GitHub的项目（包含图片，文件夹，jsp，java文件的整个课程设计文件夹）克隆到本地，然后在Atom上敲代码，修改完成后，通过GitHub客户端（GitHubDesktop软件）上传。
+����Atom
+�������д����ĵط���JSP��java�ļ���������д�ͺ��ˡ�
+���ǰ�GitHub����Ŀ������ͼƬ���ļ��У�jsp��java�ļ��������γ�����ļ��У���¡�����أ�Ȼ����Atom���ô��룬�޸���ɺ�ͨ��GitHub�ͻ��ˣ�GitHubDesktop�������ϴ���
 
-Atom这个方便的地方在于，语句高亮，快乐编程，文件目录展示
-编写JSP文件的时候，敲入标签的英文，然后按 Tab键，他就可以自动补出括号，还有基本的属性。
-至于其他快捷键，大家就自己摸索或者上网搜把~
+Atom�������ĵط����ڣ������������ֱ�̣��ļ�Ŀ¼չʾ
+��дJSP�ļ���ʱ�������ǩ��Ӣ�ģ�Ȼ�� Tab�������Ϳ����Զ��������ţ����л��������ԡ�
+����������ݼ�����Ҿ��Լ��������������Ѱ�~
 
-All in all，大家在这周就摸索一下Github和Atom怎么用吧，我自己也在学。
-实际上敲代码用的时间不会很多，一人敲一部分，一天就能做出来了。
-具体的分工也先搁置，但已基本有数了。
-如果在学有余力的情况上，我们可以把它做得更好一些，这个就到时候再看吧。
+All in all����������ܾ�����һ��Github��Atom��ô�ðɣ����Լ�Ҳ��ѧ��
+ʵ�����ô����õ�ʱ�䲻��ܶ࣬һ����һ���֣�һ������������ˡ�
+����ķֹ�Ҳ�ȸ��ã����ѻ��������ˡ�
+�����ѧ������������ϣ����ǿ��԰������ø���һЩ������͵�ʱ���ٿ��ɡ�
