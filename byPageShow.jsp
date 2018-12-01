@@ -1,103 +1,97 @@
-<8@ page contentType="text/html; charset=gb2312"8>
-<80 page import="mybean. data. DataBy Page"%>
-ks@ page import="com. sun rowset. *"s>
-<jsp: useBean id="dataBean'"
-class="mybean. data. DataBy Page"scope="session"/>
-<ºÅ@ include file="head.txt¡±8></HEAD>
-<HTML > Body background= image/back. jpg><center>
-BR>µ±Ç°ÏÔÊ¾µÄÄÚÈİÊÇ
-<table border =2>
-<tr>
-<th>»¯×±Æ·±êÊ¶ºÅ</th>
-<th>»¯×±Æ·Ãû³Æ</th>
-<th>»¯×±Æ·ÖÆÔìÉÌ</th>
-<th>»¯×±Æ·¼Û¸ñ</th>
-<th>²é¿´ÏêÇé</th>
-<td>< font color=blue>Ìí¼Óµ½¹ºÎï³µ</font></td>
-<tr>
-<jsp: setProperty name="dataBean" property="pageSize"param="pageSize">
-<jsp: setProperty name ="dataBean"property="currentPage"param="current Page"/>
-CachedRowSetImpl rowSet dataBean getRowSet()i
-if(rowSet==null)
-print("Ã»ÓĞÈÎºÎ²éÑ¯ĞÅÏ¢,ÎŞ·¨ä¯ÀÀ");
-return
-rowSet.last)
-int totalRecord= rowSet. getRow()i
-out. print1n("È«²¿¼ÇÂ¼Êı¡±+ totalRecord);
-//È«²¿¼ÇÂ¼Êı
-int pageSize= dataBean getPageSize()
-int totalpages dataBean getTotalPages()
-//Ã¿Ò³ÏÔÊ¾µÄ¼ÇÂ¼Êı
-if(total Record pageSize==0)
-totalPages totale
-ecord/ pageSize
-//×ÜÒ³Êı
-el
-totalPages= totalReco
-rd/pageSize+1
-dataBean. setpagesize(pageSize);
-dataBean.setTotalPages( totalPages)i
-Lf(totalPages >=1)(
-if(dataBean, get CurrentPage ()<1)
-ataBean. setCurrentPage( dataBean. getTotalPages())
-if(dataBean getCurrentPage()> dataBean getTotalPages())
-dataBean. setCurrentPage(
-int index =( dataBean getcurrentPage()-1)* pageSize+ li
-rowSet. absolute( index)
-//²éÑ¯Î»ÖÃÒÆ¶¯µ½ currentPageÒ³ÆğÊ¼Î»ÖÃ
-for(int i=1: i< pageSize&&boo; 1++)f
-String number rowSet getString(1)
-String name=rowSet. getString(2)i
-String maker= rowSet. getString(3)
-
-
-String price rowSet getString(4);
-String go
-ds
-+ number nn+ name x m
-maker
-+price+")#+ price;
-/±ãÓÚ¹ºÎï³µ¼ÆËã¼Û¸ñ,Î²×ºÉÏ¡±#¼Û¸ñÖµ
-goods goods replaceAll("\\p( Blank),)i
-String button="<form action='put Goods Servlet method =post>"+
-" input type ='hidden'name =java value =+ goods+>+
-"< input type=' submit' value='·ÅÈë¹ºÎï³µ'></form>";
-String detail="< form action='showDetail jsp'method = 'post'>"+
-" input type ='hidden'name='xijie' value=+ number+>+
-"< input type=' submit! value='²é¿´Ï¸½Ú¡¯></form>";
-out. print("<tr>)
-out. print("<td>+ number +"</td>")
-out.print("<td>+ name+"</td>")
-out. print("<td>+ maker+"</td>);
-out. print("<td>"+ price +"</td>);
-out. print("<td>+ detail +"</td>");
-out. print("<td>"+ button +"</td>")
-out
-t("</tr>");
-boo= rowSet. nexto;
-8>
+<%@ page contentType="text/html;charset=gb2312" %>
+<%@ page import="mybean.data.DataByPage" %>
+<%@ page import="com.sun.rowset.*" %>
+<jsp:useBean id="dataBean" class="mybean.data.DataByPage" scope="session"/>
+<%@ include file="head.txt" %></HEAD>
+<HTML><Body background=image/back.jpg><center>
+<BR>å½“å‰æ˜¾ç¤ºçš„å†…å®¹æ˜¯ï¼š
+  <table border=2>
+  <tr>
+    <th>åŒ–å¦†å“æ ‡è¯†å·</th>
+    <th>åŒ–å¦†å“åç§°</th>
+    <th>åŒ–å¦†å“åˆ¶é€ å•†</th>
+    <th>åŒ–å¦†å“ä»·æ ¼</th>
+    <th>æŸ¥çœ‹è¯¦æƒ…</th>
+    <td><font color=blue>æ·»åŠ åˆ°è´­ç‰©è½¦</font></td>
+  </tr>
+<jsp:setProperty name="dataBean" property="pageSize" param="pageSize"/>
+<jsp:setProperty name="dataBean" property="currentPage" param="currentPage"/>
+<%
+  CachedRowSetImpl rowSet=dataBean.getRowSet();
+  if(rowSet==null){
+    out.print("æ²¡æœ‰ä»»ä½•æŸ¥è¯¢ä¿¡æ¯,æ— æ³•æµè§ˆ");
+    return;
+  }
+  rowSet.last();
+  int totalRecord=rowSet.getRow();
+  out.print1n("å…¨éƒ¨è®°å½•æ•°"+totalRecord);
+  //å…¨éƒ¨è®°å½•æ•°
+  int pageSize=dataBean.getPageSize();
+  //æ¯é¡µæ˜¾ç¤ºçš„è®°å½•æ•°
+  int totalPages=dataBean.getTotalPages();
+  if(totalRecord%pageSize==0)
+    totalPages=totalRecord/pageSize;  //æ€»é¡µæ•°
+  else
+    totalPages=totalRecord/pageSize+1;
+  dataBean.setPageSize(pageSize);
+  dataBean.setTotalPages(totalPages);
+  if(totalPages>=1){
+    if(dataBean.getCurrentPage()<1)
+      dataBean.setCurrentPage(dataBean.getTotalPages());
+    if(dataBean.getCurrentPage()>dataBean.getTotalPages())
+      dataBean.setCurrentPage(1);
+    int index=(dataBean.getcurrentPage()-1)*pageSize+l;
+    rowSet.absolute(index);
+    //æŸ¥è¯¢ä½ç½®ç§»åŠ¨åˆ°currentPageé¡µèµ·å§‹ä½ç½®
+    boolean boo=true;
+    for(int i=1;i<=pageSize&&boo;i++){
+      String number=rowSet.getString(1);
+      String name=rowSet.getString(2);
+      String maker=rowSet.getString(3);
+      String price=rowSet.getString(4);
+      String goods="("+number+","+name+","+maker+","+price+")#"+price;
+      //ä¾¿äºè´­ç‰©è½¦è®¡ç®—ä»·æ ¼,å°¾ç¼€ä¸Š"#ä»·æ ¼å€¼"
+      goods=goods.replaceAll("\\p{Blank}","");
+      String button="<form action='putGoodsServlet' method='post'>"+
+        "<input type='hidden' name='java' value="+goods+">"+
+        "<input type='submit' value='æ”¾å…¥è´­ç‰©è½¦'></form>";
+      String detail="<form action='showDetail.jsp' method='post'>"+
+        "<input type='hidden' name='xijie' value="+number+">"+
+        "<input type='submit' value='æŸ¥çœ‹ç»†èŠ‚â€™></form>";
+      out.print("<tr>");
+      out.print("<td>"+number+"</td>");
+      out.print("<td>"+name+"</td>");
+      out.print("<td>"+maker+"</td>");
+      out.print("<td>"+price+"</td>");
+      out.print("<td>"+detail+"</td>");
+      out.print("<td>"+button+"</td>");
+      out.print("</tr>");
+      boo=rowSet.next();
+    }
+  }
+%>
 </table>
-<BR>Ã¿Ò³×î¶àÏÔÊ¾<sp: getProperty name=" dataBean" property=" pageSize"ÉÙÌõĞÅÏ¢
-<BR>µ±Ç°ÏÔÊ¾µÚ< Font color=blue>
-jsp: getProperty name="dataBean"property="currentPage"/>
-</Font>Ò³,¹²ÓĞ
-< Font color- blue ><jsp: getProperty name="dataBean"property="totalPages"/>
-</Font>Ò³
-Table>
-<tr>< td > FORM action=method= post
-Input type= hidden name ="currentPage"value=
-"<%= dataBean getCurrentPage()-1%>>
-< Input type= submit name="g" value="ÉÏÒ»Ò³"></FoRM></td>
-< td > FORM action="method=post>
-Input type hidden name ="currentPage"
-value="<%= dataBean getCurrentPage()+1>">
-< Input type= submit name="g" value="ÏÂÒ»Ò³"></FoRM></td></tr>
-<tr>< td> FORM action= method= post>
-Ã¿Ò³ÏÔÊ¾< Input type= text name= pageSize" value=1size=3>
-Ìõ¼ÇÂ¼< Input type= submit name="g" value="È·¶¨"></FoRM></td>
-<td> FORM action= method= post>
-ÊäÈëÒ³Âë:< Input type= text name=" currentPage"size=2>
-Input type= submit name="g" value ="H3"></FORM></td></tr>
+<BR>æ¯é¡µæœ€å¤šæ˜¾ç¤º<jsp:getProperty name="dataBean" property="pageSize"/>æ¡ä¿¡æ¯
+<BR>å½“å‰æ˜¾ç¤ºç¬¬<Font color=blue>
+  <jsp:getProperty name="dataBean" property="currentPage"/>
+</Font>é¡µ,å…±æœ‰
+<Font color=blue><jsp:getProperty name="dataBean" property="totalPages"/>
+</Font>é¡µ
+<Table>
+  <tr><td><FORM action="" method=post>
+    <Input type=hidden name="currentPage" value=
+    "<% =dataBean.getCurrentPage()-1 %>">
+      <Input type=submit name="g" value="ä¸Šä¸€é¡µ"></FORM></td>
+  <td><FORM action="" method=post>
+     <Input type=hidden name="currentPage" value=
+    "<% =dataBean.getCurrentPage()+1 %>">
+       <Input type=submit name="g" value="ä¸‹ä¸€é¡µ"></FORM></td></tr>
+  <tr><td><FORM action="" method=post>
+  æ¯é¡µæ˜¾ç¤º<Input type=text name="pageSize" value=1 size=3>
+  æ¡è®°å½•<Input type=submit name="g" value="ç¡®å®š"></FORM></td>
+  <td><FORM action="" method= post>
+    è¾“å…¥é¡µç :<Input type=text name="currentPage" size=2>
+    <Input type=submit name="g" value ="æäº¤"></FORM></td></tr>
 </Table>
-</Center
+</Center>
 </BODY ></HTML>
