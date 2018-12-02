@@ -1,36 +1,36 @@
-package myservlet control
-import mybean. data. Login;
-import java.uti1.为;
-import java.io.米
-中
-import javax. servlet. *i
-importjavax.servlethttp.*i
-public class Handledelete extends Httpservlet
-public void init( ServletConfig config) throws ServletException t
-super init(config)i
-
-
-
-publicvoiddopost(httpservletrequeStrequestHttpservletreSponse
-response) throws ServletException, IOException i
-request. setCharacter Encoding("gb2312");
-String delete request getParameter("delete")
-Login loginBean= nulli
-Httpsession session = request. getsession(true)i
-try loginBean=(Login)session. getAttribute("loginBean")i
-boolean b= loginBean getLogname()==null l
-loginBean. getLogname (). length()==0;
-if(b)
-response. sendRedirect(" login.jsp");//重定向到登录页面
-LinkedList String> car= loginBean. getCar()i
-car. remove( delete
-catch( Exception exp)t
-response. sendRedirect("login. jsp")i
-//重定向到登录页面
-RequestDispatcher dispatcher
-request getRequestDispatcher("look ShoppingCar jsp");
-dispatcher. forward (request, response)
-//转发
-response)throws ServletException, IOException/vletResponse
-public void doget(hTtpservletreqUest request Httpse
-doPost(request, response)i
+package myservlet.control;
+import mybean.data.Login;
+import java.util.*;
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+public class HandleDelete extends HttpServlet{
+  public void init(ServletConfig config) throws ServletException {
+      super.init(config);
+}
+  public void doPost(HttpServletRequest request,HttpServletResponse
+      response) throws ServletException,IOException {
+      request.setCharacterEncoding("gb2312");
+      String delete = request.getParameter("delete");
+      Login loginBean = null;
+      HttpSession session = request.getSession(true);
+      try{ loginBean = (Login)session.getAttribute("loginBean");
+            boolean b = loginBean.getLogname()==null||
+            loginBean.getLogname().length()==0;
+            if(b)
+              response.sendRedirect("login.jsp");
+            LinkedList<String> car = loginBean.getCar();
+            car.remove(delete);
+      }
+      catch(Exception exp){
+            response.sendRedirect("login.jsp");
+          }
+      RequestDispatcher dispatcher =
+      request.getRequestDispatcher("lookShoppingCar.jsp");
+      dispatcher.forward(request, response);
+    }
+    public void doGet(HttpServletRequest request,HttpServletResponse
+      response) throws ServletException, IOException{
+      doPost(request, response);
+    }
+}
