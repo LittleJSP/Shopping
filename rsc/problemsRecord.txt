@@ -28,3 +28,7 @@
 
 五.点击注册时（要连接数据库），提示The server time zone value '乱码' is unrecognized or represents more than one time zone.
 解决方法：时区的错误，在项目代码-数据库连接URL后，加上 （注意大小写必须一致）?serverTimezone=UTC
+
+六.
+A.数字1和英文l的区别：  看着  1l  ，左边是数字
+B.数字0和英文o的区别：  看着  0o  ，左边是数字

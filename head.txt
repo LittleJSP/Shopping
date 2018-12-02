@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=gb2312" %>
 <div align="center">
-<Font color=red><H3>"青山不老绿水无忧"化妆品销售网</H3></Font>
+<Font color=red><H3>劝君莫惜金缕衣，劝君惜取少年时</H3></Font>
 <table cellSpacing =“1”cellPadding =“1”width =“660”align =“center”border =“0”>
 <tr valign="bottom">
   <td><A href="inputRegisterMess.jsp">注册</font></A></td>
