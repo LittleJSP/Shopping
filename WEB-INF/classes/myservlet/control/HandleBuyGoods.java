@@ -1,92 +1,92 @@
-package myservlet. control;
-import mybean. data. Login;
-import java. sql.*
-import java.util.*
-import java.io.ĞË;
-import javax. servlet
-importjavax.servlet.http.*
-oublic class Handlebuygoods extends Httpservlet (
-p
-public void init( ServletConfig config)throws ServletException t
-super init(config)
-try
-Class forName("com mysql jdbc Driver")
-catch(Exception e)t
-public void dopost(htTpservletrequest request HttpservletreSponse
-response) throws ServletException, IOException I
-request setCharacterEncoding(gb2312")
-String buyGoodsMess request getParameter("buy");
-if(buyGoodsMess ==null l buy GoodsMess length()==0)I
-fai1( request, response,"¹ºÎï³µÃ»ÓĞÎïÆ·,ÎŞ·¨Éú³É¶©µ¥");
-return;
-
-
-
-
-String price request getParameter("price")
-if(price==null price. length()==0)(
-fai1( request, response,"Ã»ÓĞ¼ÆËã¼Û¸ñºÍ,ÎŞ·¨Éú³É¶©µ¥");
-float sum= Float parseFloat(price)
-Login loginBean= null;
-Httpsession sessions request getsession(true)i
-tryi loginBean=(Login)session. getAttribute("loginBean")
-boolean b=loginBean getLogname()==null ll
-loginBean. getLogname(). length()==0;
-f(b)
-response. sendRedirect("1ogin.jsp");//ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
-catch( Exception exp)t
-response. sendRedirect("login. jsp")i
-//ÖØ¶¨Ïòµ½µÇÂ¼Ò³Ãæ
-String uri="jdbc: mysql: //127.0.0. 1/shop?"+
-user root&password &character Encoding gb2312"i
-Connection con;
-PreparedStatement sqli
-try[ con= DriverManager get Connection(uri)
-String insertCondition="INSERT INTO orderform VALUES(?,?,?,?)"i
-sql= con. prepareStatement(insertCondition)i
-sql setInt(1, 0);
-//¶©µ¥ĞòºÅ»á×Ô¶¨Ôö¼Ó
-sql setString(2, loginBean. getLogname())i
-String(3, buyGoodsMess)
-sql setFloat(4, sum)
-sql executeUpdate()
-LinkedList car loginBean. getCar();
-car.c¡Íear
-()
-//Çå¿Õ¹ºÎï³µ
-success( request, response,"Éú³É¶©µ¥³É¹¦");
-catch(SQLException exp)(
-fai1( request, response,"Éú³É¶©µ¥Ê§°Ü"+exp);
-public void doget(hTtpservletreQuest request HttpservletreSponse
-response) throws ServletException, IOException
-doPost(
-publicvoidsuccess(httpservletrequestrequestHttpservlEtresponseresponseStringbacknews)T
-response. setContentType("text/html; charset=GB2312")
-ry i
-PrintWriter out = re
-se. getWriter()
-out println("<html > body >)i
-t println("<h2>"+ back News +</h2>")
-ln("·µ»ØÖ÷Ò³");
-out. println("< a href= index.jsp>Ö÷Ò³</a>");
-("<br>²é¿´¶©µ¥")
-
-
-
-
-out. println("< a href= lookOrderForm.jsp>²é¿´¶©µ¥<a>");
-out println("</body ></html>")
-catch(IOException exp
-publicvoidfail(httpservletreQuestrequestHttpservletrespOnseresponse
-String backNews)(
-response. setContentType
-("text/html; charset=GB2312")
-try i
-PrintWriter out= response. getWriter
-();
-out println("<html >< body >")
-out println(< h2>+ backNews +"</h2>")
-out. print1n("·µ»ØÖ÷Ò³:");
-out. println("< a href= index.jsp>Ö÷Ò³</a>");
-out println("</body ></html>")
-catch(IOException exp)()
+package myservlet.control;
+import mybean.data.Login;
+import java.sql.*;
+import java.util.*;
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+public class HandleBuyGoods extends HttpServlet {
+  public void init(ServletConfig config) throws ServletException {
+      super.init(config);
+      try{
+          Class.forName("com.mysql.jdbc.Driver");
+        }
+        catch(Exception e){}
+      }
+      public void doPost(HttpServletRequest request,HttpServletResponse
+        response) throws ServletException,IOException{
+        request.setCharacterEncoding("gb2312");
+        String buyGoodsMess = request.getParameter("buy");
+        if(buyGoodsMess == null || buyGoodsMess.length()==0){
+          fail(request,response,"è´­ç‰©è½¦æ²¡æœ‰ç‰©å“,æ— æ³•ç”Ÿæˆè®¢å•");
+          return;
+        }
+        String price = request.getParameter("price");
+        if(price==null || price.length()==0){
+          fail(request,response,"æ²¡æœ‰è®¡ç®—ä»·æ ¼å’Œ,æ— æ³•ç”Ÿæˆè®¢å•");
+          return;
+      }
+      float sum= Float.parseFloat(price);
+      Login loginBean= null;
+      HttpSession sessions = request.getSession(true);
+      try{ loginBean = (Login)session.getAttribute("loginBean");
+            boolean b = loginBean.getLogname()==null ||
+            loginBean.getLogname().length()==0;
+            if(b)
+              response.sendRedirect("1ogin.jsp");
+      }
+      catch(Exception exp){
+          response.sendRedirect("login.jsp");
+        }
+        String uri="jdbc:mysql://127.0.0.1/shop?"+
+            "user = root&password = &characterEncoding = gb2312";
+        Connection con;
+        PreparedStatement sql;
+        try{ con= DriverManager.getConnection(uri);
+              String insertCondition="INSERT INTO orderform VALUES(?,?,?,?)";
+              sql = con.prepareStatement(insertCondition);
+              sql.setInt(1,0);
+              sql.setString(2,loginBean.getLogname());
+              sql.setString(3,buyGoodsMess);
+              sql.setFloat(4,sum);
+              sql.executeUpdate();
+              LinkedList car = loginBean.getCar();
+              car.clear();
+              success(request,response,"ç”Ÿæˆè®¢å•æˆåŠŸ");
+          }
+          catch(SQLException exp){
+                fail(request,response,"ç”Ÿæˆè®¢å•å¤±è´¥"+exp);
+              }
+          }
+        public void doGet(HttpServletRequest request,HttpServletResponse
+            response) throws ServletException,IOException {
+            doPost(request, response);
+        }
+        public void success(HttpServletRequest request,HttpServletResponse response,String backnews){
+            response.setContentType("text/html;charset=GB2312");
+            try {
+              PrintWriter out = response.getWriter();
+              out.println("<html><body>");
+              out.println("<h2>"+backNews+"</h2>");
+              out.println("è¿”å›ä¸»é¡µ");
+              out.println("<a href= index.jsp>ä¸»é¡µ</a>");
+              out.println("<br>æŸ¥çœ‹è®¢å•");
+              out.println("<a href= lookOrderForm.jsp>æŸ¥çœ‹è®¢å•<a>");
+              out.println("</body ></html>");
+            }
+              catch(IOException exp){}
+          }
+      public void fail(HttpServletRequest request,HttpServletResponse response,
+        String backNews){
+          response.setContentType("text/html;charset=GB2312");
+          try {
+            PrintWriter out= response.getWriter();
+            out.println("<html><body>");
+            out.println("<h2>"+backNews+"</h2>");
+            out.println("è¿”å›ä¸»é¡µ:");
+            out.println("<a href= index.jsp>ä¸»é¡µ</a>");
+            out.println("</body></html>");
+          }
+          catch(IOException exp){}
+        }
+}
