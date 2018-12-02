@@ -1,6 +1,6 @@
 <% page contentType= "text/html;charset=GB2312" %>
 <% page import ="mybean.data.Login"%>
-<% page import ="java.util. *"%>
+<% page import ="java.util.*"%>
 <jsp:useBean id= "loginBean" class= "mybean.data.Login" scope="session"/>
 <HTML><HEAD><%@ include file = "head.txt” %></HEAD>
 <BODY background= image/back.jpg >< font size=2>
