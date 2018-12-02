@@ -1,3 +1,3 @@
-å»ºè®®ä½¿ç”¨çš„MySQLç®¡ç†å™¨ï¼š SQLyog Communityç‰ˆ
-å¯¼å…¥æ•™å­¦é“¾æ¥ï¼šhttps://jingyan.baidu.com/article/647f0115c5ad9f7f2148a8c6.html
-PSï¼šå¯¼å…¥åè¦é‡æ–°å¯åŠ¨SQLyog
+½¨ÒéÊ¹ÓÃµÄMySQL¹ÜÀíÆ÷£º SQLyog Community°æ
+µ¼Èë½ÌÑ§Á´½Ó£ºhttps://jingyan.baidu.com/article/647f0115c5ad9f7f2148a8c6.html
+PS£ºµ¼ÈëºóÒªÖØĞÂÆô¶¯SQLyog

@@ -14,7 +14,7 @@
     try{
       con=DriverManager.getConnection(uri);
       sql=con.createStatement();
-      //璇诲彇classify琛紝鑾峰緱鍒嗙被;
+      //读取classify表，获得分类;
       rs=sql.executeQuery("SELECT * FROM classify ");
       out.print("<form action='queryServlet'method='post'>");
       out.print("<select name='fenleiNumber'>");
@@ -24,7 +24,7 @@
         out.print("<option value="+id+">"+name+"</option>");
       }
       out.print("</select>");
-      out.print("<input type='submit' value='鎻愪氦'>");
+      out.print("<input type='submit' value='提交'>");
       out.print("</form>");
       con.close();
     }
