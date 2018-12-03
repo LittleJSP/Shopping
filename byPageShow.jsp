@@ -24,7 +24,7 @@
   }
   rowSet.last();
   int totalRecord=rowSet.getRow();
-  out.print1n("全部记录数"+totalRecord);
+  out.println("全部记录数"+totalRecord);
   //全部记录数
   int pageSize=dataBean.getPageSize();
   //每页显示的记录数
@@ -40,7 +40,7 @@
       dataBean.setCurrentPage(dataBean.getTotalPages());
     if(dataBean.getCurrentPage()>dataBean.getTotalPages())
       dataBean.setCurrentPage(1);
-    int index=(dataBean.getcurrentPage()-1)*pageSize+l;
+    int index=(dataBean.getCurrentPage()-1)*pageSize+1;
     rowSet.absolute(index);
     //查询位置移动到currentPage页起始位置
     boolean boo=true;
@@ -71,20 +71,18 @@
   }
 %>
 </table>
-<BR>每页最多显示<jsp:getProperty name="dataBean" property="pageSize"/>条信息
+<BR>每页最多显示<jsp:getProperty name="dataBean" property="pageSize" />条信息
 <BR>当前显示第<Font color=blue>
   <jsp:getProperty name="dataBean" property="currentPage"/>
 </Font>页,共有
-<Font color=blue><jsp:getProperty name="dataBean" property="totalPages"/>
-</Font>页
+<Font color=blue><jsp:getProperty name="dataBean" property="totalPages" />
+</Font>页.
 <Table>
   <tr><td><FORM action="" method=post>
-    <Input type=hidden name="currentPage" value=
-    "<% =dataBean.getCurrentPage()-1 %>">
+    <Input type=hidden name="currentPage" value="<% =dataBean.getCurrentPage()-1 %>" >
       <Input type=submit name="g" value="上一页"></FORM></td>
   <td><FORM action="" method=post>
-     <Input type=hidden name="currentPage" value=
-    "<% =dataBean.getCurrentPage()+1 %>">
+     <Input type=hidden name="currentPage" value="<%=dataBean.getCurrentPage()+1 %>" >
        <Input type=submit name="g" value="下一页"></FORM></td></tr>
   <tr><td><FORM action="" method=post>
   每页显示<Input type=text name="pageSize" value=1 size=3>
