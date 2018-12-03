@@ -51,4 +51,22 @@ picture=rs.getString(6);
 //便于购物车计算价格，尾缀上“#”价格值
 String goods="("+number+","+name+","+maker+","+price+")#"+price;
 goods=goods.replaceAll("\\p{Blank}","");
-String button="<form action='putGoodsServlet'method = 'post'>"+"<input type='hidden' name='java' value="+goods+">"+<input type='submit' value='鏀惧叆璐墿杞
+String button="<form action='putGoodsServlet'method = 'post'>"+"<input type='hidden' name='java' value="+goods+">"+<input type='submit' value='鏀惧叆璐墿杞?'></form>";
+out.print("<tr>");
+out.print("<td>"+number+"</td>");
+out.print("<td>"+name+"</td>");
+out.print("<td>"+maker+"</td>");
+out.print("<td>"+price+"</td>");
+out.print("<td>"+button+"</td>");
+out.print("</tr>");
+}
+out.print("</table>");
+out.print("产品详情:<br>");
+out println("<div align=center>"+detailMess+"<div>");
+String pic="<img src='image/"+picture+"'width=260 height=200></img>";
+out.print(pic);
+con.close();
+}
+catch(SQLException exp){}
+%>
+</Center></BODY></HTML>
