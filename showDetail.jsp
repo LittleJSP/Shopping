@@ -6,12 +6,12 @@
 <HTML> <Body background=image/back.jpg><center>
 <% if(loginBean==null){
 response.sendRedirect("login.jsp");
-//重定向到登录页面
+
 }
 else{
 boolean b= loginBean.getLogname()==null||loginBean.getLogname().length()==0;
 if(b)
-response.sendRedirect("1ogin.jsp");//重定向到登录页面
+response.sendRedirect("1ogin.jsp");
 }
 String numberID=request.getParameter("xijie");
 out.print("<th>��Ʒ��"+numberID);
