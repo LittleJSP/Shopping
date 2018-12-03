@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=gb2312"%>
 <HTML><HEAD><%@ include file="head.txt"%></HEAD>
-<BODY background=image/back.jpg><Font size=2>
+<BODY background=image/happy.jpg><Font size=2>
 <div align=center>
 <br>查询时可以输入化妆品的版本号或化妆品名称及价格.<br>
 化妆品名称支持模糊查询

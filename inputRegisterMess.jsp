@@ -2,7 +2,7 @@
 <jsp:useBean id="userBean" class="mybean.data.Register" scope="request" />
 <HEAD><%@ include file="head.txt" %></HEAD>
 <title>×¢²áÒ³Ãæ</title>
-<HTML><BODY background=image/back.jpg><Font size=2>
+<HTML><BODY background=image/happy.jpg><Font size=2>
 <div align="center">
 <FORM action="registerServlet" method="post" name=form>
 <table>
