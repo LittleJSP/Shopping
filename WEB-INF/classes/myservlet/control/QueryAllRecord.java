@@ -26,7 +26,7 @@ try{
 dataBean=(DataByPage)session.getAttribute("dataBean");
 if(dataBean==null){
 dataBean=new DataByPage();
-//鍒涘缓 Javabean瀵硅薄
+//创建Javabean对象
 session.setAttribute("dataBean", dataBean);
 }}
 catch(Exception exp){
@@ -39,14 +39,14 @@ con=DriverManager.getConnection(uri,"root","");
 Statement sql=con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
 ResultSet rs=sql.executeQuery("SELECT * FROM cosmeticForm where id="+id);
 rowSet=new CachedRowSetImpl();
-//鍒涘缓琛岄泦瀵硅薄
+//创建行集对象
 rowSet.populate(rs);
-dataBean.setRowSet(rowSet);
+dataBean.setRowSet(rowSet);//行集数据存储到databean中
 con.close();
-//鍏抽棴杩炴帴
+//关闭连接
 }
 catch(SQLException exp){}
-response.sendRedirect("byPageShow.jsp");//閲嶅畾鍚戝埌 byPageshow.jsp
+response.sendRedirect("byPageShow.jsp");//重定向到byPageshow.jsp
 }
 public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
 doPost(request,response);
