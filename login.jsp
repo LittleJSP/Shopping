@@ -1,7 +1,7 @@
 <%@ page contentType = "text/html;charset=gb2312" %>
 <jsp:useBean id = "loginBean" class= "mybean.data.Login" scope= "session"/>
 <HTML><HEAD><%@ include file ="head.txt" %> </HEAD>
-<BODY background=image/happy.jpg> <font size = 2>
+<BODY/> <font size = 2>
 <div  align="center">
 <table border = 2>
     <tr><th>µÇÂ¼</th></tr>

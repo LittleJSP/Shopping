@@ -1,16 +1,36 @@
 <%@ page contentType="text/html;charset=gb2312" %>
-<div align="center">
-<Font color=red><H3>劝君莫惜金缕衣，劝君惜取少年时</H3></Font>
-<table cellSpacing =“1”cellPadding =“1”width =“660”align =“center”border =“0”>
-<tr valign="bottom">
-  <td><A href="inputRegisterMess.jsp">注册</font></A></td>
-  <td><A href="login.jsp">登录</A></td>
-  <td><A href="lookCosmetic.jsp">浏览化妆品</A></td>
-  <td><A href="searchCosmetic.jsp">查询化妆品</A></td>
-  <td><A href="lookShoppingCar.jsp">查看购物车</A></td>
-  <td><A href="lookOrderForm.jsp">查看订单</A></td>
-  <td><A href="exitServlet">退出</A></td>
-  <td><A href="index.jsp">主页</A></td>
-</tr>
-</table>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><style type="text/css">
+@import url("css/1.css");
+
+</style>
+</head>
+
+<body>
+<div id="body_wrapper">
+ <div id="wrapper">
+<div class="header">
+ <ul>
+    <li><a href="login.jsp">登录</a></li>
+    <li><a href="inputRegisterMess.jsp">注册</a></li>
+    <li><a href="exitServlet">退出</a></li>
+   </ul>
+   
+   <p>劝君莫惜金缕衣，劝君惜取少年时</p>
+ 
+<div align="center" class="daohang">
+<ul>
+
+  <li><a href="index.jsp">首页</a></li>
+  <li><a href="lookCosmetic.jsp">浏览书籍</a></li>
+  <li><a href="#">书评</a></li>
+  <li><a href="searchCosmetic.jsp">查询书籍</a></li>
+  <li><a href="lookOrderForm.jsp">查看订单</a></li>
+   <li><a href="lookShoppingCar.jsp">我的购物车</a></li>
+ 
+</ul>
+</div></div></div> </div>
 </div>
+</body>
+</html>
