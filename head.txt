@@ -12,11 +12,13 @@
  <div id="wrapper">
 <div class="header">
  <ul>
-    <li><a href="login.jsp">登录</a></li>
-    <li><a href="inputRegisterMess.jsp">注册</a></li>
     <li><a href="exitServlet">退出</a></li>
+    <li><a href="inputRegisterMess.jsp">注册</a></li>
+    <li><a href="login.jsp">登录</a></li>
    </ul>
-   
+   <div class="zhongjian"> 
+<h1>神奇书屋</h1>
+</div>
    <p>劝君莫惜金缕衣，劝君惜取少年时</p>
  
 <div align="center" class="daohang">
