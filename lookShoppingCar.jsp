@@ -16,13 +16,13 @@ else {
 }
 LinkedList car= loginBean.getCar();
 if(car==null)
-  out.print("<h2>è´­ç‰©è½¦æ²¡æœ‰ç‰©å“</h2>");
+  out.print("<h2>¹ºÎï³µÃ»ÓĞÎïÆ·</h2>");
 else {
   Iterator<String> iterator = car.iterator ();
   StringBuffer buyGoods = new StringBuffer();
   int n = 0;
   double priceSum =0;
-  out.print("è´­ç‰©è½¦ä¸­çš„ç‰©å“:<table border=2>");
+  out.print("¹ºÎï³µÖĞµÄÎïÆ·:<table border=2>");
   while(iterator.hasNext()){
     String goods = iterator.next();
     String showGoods = "";
@@ -33,7 +33,7 @@ else {
       showGoods = goods.substring(0,index);
     }
     buyGoods.append(n+":"+showGoods);
-    String del = "<form action= 'deleteServlet' method = 'post'>"+"<input type = 'hidden'name= 'delete'value = '+goods+'>"+"<input type='submit' value='åˆ é™¤'></form>";
+    String del = "<form action= 'deleteServlet' method = 'post'>"+"<input type = 'hidden'name= 'delete'value = '+goods+'>"+"<input type='submit' value='É¾³ı'></form>";
     out.print("<tr><td>"+ showGoods+"</td>");
     out.print("<td>"+del+"</td></tr>");
   }
@@ -41,7 +41,7 @@ else {
   String orderForm = "<form action='buyServlet'method='post'>" +
     "<input type ='hidden'name = 'buy' value ="+buyGoods+">" +
     "<input type ='hidden'name = 'price' value="+priceSum+">" +
-    "<input type ='submit' value ='ç”Ÿæˆè®¢å•'></form>";
+    "<input type ='submit' value ='Éú³É¶©µ¥'></form>";
   out.print(orderForm);
 }
 %>
