@@ -1,51 +1,45 @@
-package myservlet. control;
-import mybean. data. Login;
-import java.uti1.头
-mport java.io.米
-import javax. servlet. *i
-importjavax.servlethttp.*i
-public class PutgoodstocAr extends Httpservlet
-public void init(ServletConfig config) throws ServletException I
-super init(config)
-public void dopost(HttpservletrequEst request HttpservletreSponse
-2朋,
-response) throws ServletException, IOException
-
-
-request. setCharacterEncoding
-("gb2312");
-String goods request getParameter("java)i
-System. out. println( goods)
-Login loginBean= null
-Httpsession session= request. getsession(True)i
-try loginBean =(Login)session. getAttribute("loginBean
-boolean b= loginBean getLogname ()== null ll
-loginBean. getLogname(). length()==0
+package myservlet.control;
+import mybean.data.Login;
+import java.util.*;
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+public class PutGoodsToCar extends HttpServlet{
+public void init(ServletConfig config) throws ServletException{
+super.init(config);
+}
+public void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
+request.setCharacterEncoding("gb2312");
+String goods=request.getParameter("java");
+System.out.println(goods);
+Login loginBean=null;
+HttpSession session=request.getSession(true);
+try {loginBean=(Login)session.getAttribute("loginBean");
+boolean b=loginBean.getLogname()==null||loginBean.getLogname().length()==0;
 if(b)
-response. sendRedirect("login. jsp
-);//重定向到登录页面
-LinkedList< String> car loginBean getCar();
-car. add( goods )i
-speak SomeMess(request, response, goods)
-catch(Exception exp)t
-response. sendRedirect("login. jsp");
-//重定向到登录页面
-public void doget(HttpservletreQuest request HttpservletrEsponse
-response) throws ServletException, IOException f
-doPost(request, response)i
-publicvoidspeaksomemess(httpsErvletrequestrequest
-HttpservletrespOnse response String goods)i
-resp
-e setContentType("text/html; charset=GB2312")
-try
-PrintWriter out =response. ge
-out.print("<%@ include file='head. txt%></HEAD>)i
-out println("<htm1 ><bo
-t println(<h2>+ go
-放入购物车</h2>
-out. print1n("查看购物车或返回浏览化妆品<br>");
-out. println("< a href=1 ook ShoppingCart.jp>查看购物车</a>")
-out.pint1n("<br>< a href= byPageshow.3p>浏览化妆品</a>");
-out. p
-("</hoy></htm>");
-tch(IOException exp)F
+response.sendRedirect("login.jsp");
+LinkedList<String> car=loginBean.getCar();
+car.add(goods);
+speakSomeMess(request,response,goods);
+}
+catch(Exception exp){
+response.sendRedirect("login.jsp");
+}}
+public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException {
+doPost(request,response);
+}
+public void speakSomeMess(HttpServletRequest request,HttpServletResponse response,String goods){
+response.setContentType("text/html;charset=gb2312");
+try{
+PrintWriter out =response.getWriter();
+out.print("<%@ include file='head.txt' %></HEAD>");
+out.println("<html><body>");
+out.println("<h2>"+goods+"鏀惧叆gouwuche</h2>");
+out.println("chakangouwuchehuofanhuiliulanhuazhuangpin<br>");
+out.println("<a href=lookShoppingCar.jsp>chakangouwuche</a>");
+out.println("<br><a href=byPageShow.jsp>liulanhuazhuangpin</a>");
+out.println("</body></htm>");
+}
+catch(IOException exp){}
+}
+}
