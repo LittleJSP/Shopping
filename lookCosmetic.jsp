@@ -1,13 +1,13 @@
 <%@page contentType="text/html;charset=gb2312" %>
 <%@page import="java.sql.*" %>
 <HTML><HEAD><%@include file="head.txt" %></HEAD>
-<BODY background=image/back.jpg><font size=2>
+<BODY background=image/happy.jpg><font size=2>
 <div align="center">
 <%  try{ Class.forName("com.mysql.jdbc.Driver");
     }
     catch(Exception e){}
     String uri="jdbc:mysql://127.0.0.1/shop?"+
-      "user=root&password=&characterEncoding=gb2312";
+      "user=root&password=&characterEncoding=gb2312&serverTimezone=UTC";
     Connection con;
     Statement sql;
     ResultSet rs;

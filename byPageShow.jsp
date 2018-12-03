@@ -3,7 +3,7 @@
 <%@ page import="com.sun.rowset.*" %>
 <jsp:useBean id="dataBean" class="mybean.data.DataByPage" scope="session"/>
 <%@ include file="head.txt" %></HEAD>
-<HTML><Body background=image/back.jpg><center>
+<HTML><Body background=image/happy.jpg><center>
 <BR>当前显示的内容是：
   <table border=2>
   <tr>

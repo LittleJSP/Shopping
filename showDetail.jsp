@@ -6,7 +6,7 @@ jsp: useBean id="loginBean"class="mybean. data. Login"scope="session"/>
 @
 de file="h
 </HEAD
-HTML > Body background= image/back. jpg><center>
+HTML > Body background= image/happy. jpg><center>
 if(loginBean==null)(
 response. sendRedirect("login. jsp");
 重定向到登录页面

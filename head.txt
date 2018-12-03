@@ -5,7 +5,7 @@
 <tr valign="bottom">
   <td><A href="inputRegisterMess.jsp">注册</font></A></td>
   <td><A href="login.jsp">登录</A></td>
-  <td><A href="look Cosmetic.jsp">浏览化妆品</A></td>
+  <td><A href="lookCosmetic.jsp">浏览化妆品</A></td>
   <td><A href="searchCosmetic.jsp">查询化妆品</A></td>
   <td><A href="lookShoppingCart.jsp">查看购物车</A></td>
   <td><A href="lookOrderForm.jsp">查看订单</A></td>
