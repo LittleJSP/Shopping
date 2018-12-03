@@ -51,7 +51,7 @@ picture=rs.getString(6);
 //便于购物车计算价格，尾缀上“#”价格值
 String goods="("+number+","+name+","+maker+","+price+")#"+price;
 goods=goods.replaceAll("\\p{Blank}","");
-<<<<<<< HEAD
+< HEAD
 String button="<form action='putGoodsServlet'method = 'post'>"+"<input type='hidden' name='java' value="+goods+">"+<input type='submit' value='鏀惧叆璐墿杞?'></form>";
 out.print("<tr>");
 out.print("<td>"+number+"</td>");

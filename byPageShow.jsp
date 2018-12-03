@@ -24,10 +24,8 @@
   }
   rowSet.last();
   int totalRecord=rowSet.getRow();
-  out.println("全部记录数"+totalRecord);
-  //全部记录数
-  int pageSize=dataBean.getPageSize();
-  //每页显示的记录数
+  out.println("全部记录数"+totalRecord);   //全部记录数
+  int pageSize=dataBean.getPageSize();    //每页显示的记录数
   int totalPages=dataBean.getTotalPages();
   if(totalRecord%pageSize==0)
     totalPages=totalRecord/pageSize;  //总页数
@@ -79,7 +77,7 @@
 </Font>页.
 <Table>
   <tr><td><FORM action="" method=post>
-    <Input type=hidden name="currentPage" value="<% =dataBean.getCurrentPage()-1 %>" >
+    <Input type=hidden name="currentPage" value="<%=dataBean.getCurrentPage()-1 %>" >
       <Input type=submit name="g" value="上一页"></FORM></td>
   <td><FORM action="" method=post>
      <Input type=hidden name="currentPage" value="<%=dataBean.getCurrentPage()+1 %>" >
