@@ -2,7 +2,7 @@
 <html>
 <head>
 <style type="text/css">
-@import url("css/1.css");
+@import url("css/index.css");
 </style>
 </head>
 

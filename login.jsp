@@ -2,7 +2,7 @@
 <jsp:useBean id = "loginBean" class= "mybean.data.Login" scope= "session"/>
 <HTML>
 <head><style type="text/css">
-@import url("css/2.css");
+@import url("css/login.css");
 
 </style>
 </head>
