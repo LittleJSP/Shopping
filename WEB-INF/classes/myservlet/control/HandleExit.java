@@ -1,19 +1,19 @@
-package myservlet contro
-import javax. servlet. *i
-importjavax.servlet.http.*
-import java.1o.兴
-public class Handleexit extends Httpservlet
-public void init(ServletConfig config) throws ServletException
-super init(config)i
-public void dopost(hTtpservletrequest request HttpservletrespOnse
-response)throws ServletException, IOException t
-Httpsession session=request. getsession(trUe);
-session. invalidate
-//销毁用户的 session对象
-response. sendRedirect("index. jsp")i
-//返回主页
-
-
-public void doget(hTtpservletrequeSt request HttpservletresPonse
-response)throws ServletException, IOException f
-doPost(request, response)i
+package myservlet.control;
+import javax. servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+public class HandleExit extends HttpServlet {
+public void init(ServletConfig config) throws ServletException{
+super.init(config);
+}
+public void doPost(HttpServletRequest request,HttpServletResponse
+response) throws ServletException, IOException{
+HttpSession session=request. getSession(true);
+session.invalidate();
+response.sendRedirect("index.jsp");
+}
+public void doGet(HttpServletRequest request,HttpServletResponse
+response) throws ServletException, IOException{
+doPost(request, response);
+ }
+}

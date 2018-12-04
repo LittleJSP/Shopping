@@ -5,18 +5,18 @@
 <HTML><HEAD><%@ include file = "head.txt" %>
 <BODY background= image/happy.jpg><font size=2>
 <div align = "center">
-<%  if(loginBean == null){
+<%  if(loginBean==null){
       response.sendRedirect("login.jsp");
       }
 else {
-    boolean b =loginBean.getLogname() == null ||
+    boolean b =loginBean.getLogname()==null ||
        loginBean.getLogname().length() == 0;
   if(b)
     response.sendRedirect("login.jsp");
 }
 LinkedList car= loginBean.getCar();
 if(car==null)
-  out.print("<h2>购物车没有物品.</h2>");
+  out.print("<h2>购物车没有物品</h2>");
 else {
   Iterator<String> iterator = car.iterator ();
   StringBuffer buyGoods = new StringBuffer();
@@ -33,10 +33,7 @@ else {
       showGoods = goods.substring(0,index);
     }
     buyGoods.append(n+":"+showGoods);
-    String del = "<form action= 'deleteServlet' method = 'post'>"+
-      "<input type = 'hidden'name= 'delete'value = "+goods+">
-      "+"< input type='submit' value="删除"></form>";
-
+    String del = "<form action= 'deleteServlet' method = 'post'>"+"<input type = 'hidden'name= 'delete'value = '+goods+'>"+"<input type='submit' value='删除'></form>";
     out.print("<tr><td>"+ showGoods+"</td>");
     out.print("<td>"+del+"</td></tr>");
   }
@@ -46,6 +43,7 @@ else {
     "<input type ='hidden'name = 'price' value="+priceSum+">" +
     "<input type ='submit' value ='生成订单'></form>";
   out.print(orderForm);
+}
 %>
 </div></font>
 </BODY></HTML>
