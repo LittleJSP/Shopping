@@ -1,18 +1,70 @@
 <%@ page contentType = "text/html;charset=gb2312" %>
 <jsp:useBean id = "loginBean" class= "mybean.data.Login" scope= "session"/>
-<HTML><HEAD><%@ include file ="head.txt" %> </HEAD>
-<BODY/> <font size = 2>
-<div  align="center">
-<table border = 2>
-    <tr><th>登录</th></tr>
-    <FORM action ="loginServlet" Method ="post">
-    <tr><td>登录名称：<Input type=text name="logname"></td></tr>
-    <tr><td>输入密码：<Input type=password name="password"></td></tr>
-</table>
-<Input type=submit name="g" value ="提交">
-</form> </div>
+<HTML>
+<head><style type="text/css">
+@import url("css/2.css");
+
+</style>
+</head>
+
+<body>
+<div id="body_warpper">
+<div class="header">
+ <ul>
+    <li><a href="exitServlet">退出</a></li>
+    <li><a href="inputRegisterMess.jsp">注册</a></li>
+    <li><a href="login.jsp">登录</a></li>
+  </ul>
+<div class="zhongjian"> <h1>神奇书屋</h1></div>
+
+   
+<p>劝君莫惜金缕衣，劝君惜取少年时</p>
+ 
+<div align="center" class="daohang">
+<ul>
+
+  <li><a href="index.jsp">首页</a></li>
+  <li><a href="lookCosmetic.jsp">浏览书籍</a></li>
+  <li><a href="searchCosmetic.jsp">查询书籍</a></li>
+  <li><a href="lookOrderForm.jsp">查看订单</a></li>
+  <li><a href="lookShoppingCar.jsp">我的购物车</a></li>
+</ul>
+</div>
+
+</div>
+
+
+<div id="content">
+
+   <div class="denglu" align="center">
+   <br/><br/>
+   <h1 align="center">登录</h1>
+   <table border = 2>
+   <FORM action ="loginServlet" Method ="post">
+   <tr><td>登录名称：<Input type=text name="logname"></td></tr>
+   <tr><td>输入密码：<Input type=password name="password"></td></tr>
+   </table>
+   <br/>
+   </form> </div>
+<Input type=submit name="g" value ="提交" class="submit">
+<br/><br/>
 <div align ="center">
     登录反馈信息：<jsp:getProperty name="loginBean" property="backNews"/>
     <br>登录名称：<jsp:getProperty name="loginBean" property="logname"/>
-</div> </font>
-</BODY> </HTML>
+</div>
+</div>
+
+
+<div class="footer">
+
+    <p align="center"><a href="index.jsp">首页</a> | 
+<a href="ookCosmetic.jsp">浏览书籍</a>| 
+<a href="searchCosmetic.jsp">查询书籍</a> | 
+<a href="lookOrderForm.jsp">查看订单</a> | 
+<a href="lookShoppingCar.jsp">我的购物车</a>
+     <br />
+     <br />
+      Copyright &copy; &nbsp;<a href="yuanshishuzhai.html">神奇书屋</a>&nbsp;&nbsp;2018&nbsp;&nbsp;| &nbsp;&nbsp;热线：888-520-1314&nbsp;&nbsp;| &nbsp;&nbsp;地址：深圳市南山区华侨城暨南大学深圳旅游学院</p> 
+  </div>
+</div>
+</body></HTML>
