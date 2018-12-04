@@ -2,17 +2,22 @@
 <%@ page import="mybean.data.DataByPage" %>
 <%@ page import="com.sun.rowset.*" %>
 <jsp:useBean id="dataBean" class="mybean.data.DataByPage" scope="session"/>
-<%@ include file="head.txt" %></HEAD>
-<HTML><Body>
 
-<head><style type="text/css">
-@import url("css/liulanshuji.css");
-</style>
-</head>
+<HTML>
+<head><%@ include file="head.txt" %>
+<style type="text/css">
+@import url("css/bypageshow.css");
+</style></head>
 
+
+<Body>
 <div class="content align="center">
+  
+  <input type="button" name="Submit" onclick="javascript:history.back(-1);" value="返回" class="btn">
+  
+
 <center>
-<BR>当前显示的内容是：
+<BR><h4>当前显示的内容是：</h4>
   <table border=2>
 <tr>
     <th>化妆品标识号</th>
@@ -20,8 +25,9 @@
     <th>化妆品制造商</th>
     <th>化妆品价格</th>
     <th>查看详情</th>
-    <td><font color=brown>添加到购物车</font></td>
+    <th>添加到购物车</th>
   </tr>
+
 <jsp:setProperty name="dataBean" property="pageSize" param="pageSize"/>
 <jsp:setProperty name="dataBean" property="currentPage" param="currentPage"/>
 <%
@@ -60,11 +66,12 @@
       goods=goods.replaceAll("\\p{Blank}","");
       String button="<form action='putGoodsServlet' method='post'>"+
         "<input type='hidden' name='java' value="+goods+">"+
-        "<input type='submit' value='放入购物车'></form>";
+        "<input type='submit' value='放入购物车' class='putincar'></form>";
       String detail="<form action='showDetail.jsp' method='post'>"+
         "<input type='hidden' name='xijie' value="+number+">"+
-        "<input type='submit' value='查看细节'></form>";
-      out.print("<tr>");
+        "<input type='submit' value='查看细节' class='xijie'></form>";
+      
+      out.print("<tr align='center'>");
       out.print("<td>"+number+"</td>");
       out.print("<td>"+name+"</td>");
       out.print("<td>"+maker+"</td>");
@@ -76,26 +83,28 @@
     }
   }
 %>
+
+
 </table>
 <BR>每页最多显示<jsp:getProperty name="dataBean" property="pageSize" />条信息
-<BR>当前显示第<Font color=blue>
+<BR>当前显示第<Font color=brown>
   <jsp:getProperty name="dataBean" property="currentPage"/>
 </Font>页,共有
-<Font color=blue><jsp:getProperty name="dataBean" property="totalPages" />
+<Font color=brown><jsp:getProperty name="dataBean" property="totalPages" />
 </Font>页.
 <Table>
   <tr><td><FORM action="" method=post>
     <Input type=hidden name="currentPage" value="<%=dataBean.getCurrentPage()-1 %>" >
-      <Input type=submit name="g" value="上一页"></FORM></td>
+      <Input type=submit name="g" value="上一页" class="shangyiye"></FORM></td>
   <td><FORM action="" method=post>
      <Input type=hidden name="currentPage" value="<%=dataBean.getCurrentPage()+1 %>" >
-       <Input type=submit name="g" value="下一页"></FORM></td></tr>
+       <Input type=submit name="g" value="下一页" class="xiayiye"></FORM></td></tr>
   <tr><td><FORM action="" method=post>
   每页显示<Input type=text name="pageSize" value=1 size=3>
-  条记录<Input type=submit name="g" value="确定"></FORM></td>
+  条记录<Input type=submit name="g" value="确定" class="ok"></FORM></td>
   <td><FORM action="" method= post>
     输入页码:<Input type=text name="currentPage" size=2>
-    <Input type=submit name="g" value ="提交"></FORM></td></tr>
+    <Input type=submit name="g" value ="提交" class="tijiao"></FORM></td></tr>
 </Table>
 </Center>
 </div>

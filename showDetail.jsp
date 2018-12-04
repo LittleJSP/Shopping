@@ -2,8 +2,21 @@
 <%@ page import="mybean.data.Login" %>
 <%@ page import="java.sql.*" %>
 <jsp:useBean id="loginBean" class="mybean.data.Login" scope="session"/>
-<%@ include file="head.txt" %></HEAD>
-<HTML> <Body><center>
+
+<HTML>
+
+<head><%@ include file="head.txt" %>
+<style type="text/css">
+@import url("css/showdetail.css");
+</style></head>
+
+
+<Body>
+<div class="content align="center">
+  <input type="button" name="Submit" onclick="javascript:history.back(-1);" value="返回" class="btn">
+  
+<center>
+
 <% if(loginBean==null){
 response.sendRedirect("login.jsp#content");
 }
@@ -37,8 +50,8 @@ out.print("<th>产品号");
 out.print("<th>名称");
 out.print("<th>制造商");
 out.print("<th>价格");
-out.print("<th><font color=brown>放入购物车</font>");
-out.print("</TR>");
+out.print("<th>放入购物车");
+out.print("</tr>");
 String picture="welcome.jpg";
 String detailMess="";
 while(rs.next()){
@@ -51,7 +64,8 @@ picture=rs.getString(6);
 //便于购物车计算价格，尾缀上“#”价格值
 String goods="("+number+","+name+","+maker+","+price+")#"+price;
 goods=goods.replaceAll("\\p{Blank}","");
-String button="<form action='putGoodsServlet' method='post'>"+"<input type='hidden' name='java' value="+goods+">"+"<input type='submit' value='放入购物车'></form>";
+String button="<form action='putGoodsServlet' method='post'>"+"<input type='hidden' name='java' value="+goods+">"+"<input type='submit' value='放入购物车' class='putincar'></form>";
+out.print("<br/>");
 out.print("<tr>");
 out.print("<td>"+number+"</td>");
 out.print("<td>"+name+"</td>");
@@ -69,4 +83,7 @@ con.close();
 }
 catch(SQLException exp){}
 %>
-</Center></BODY></HTML>
+
+</Center>
+</div>
+</BODY></HTML>

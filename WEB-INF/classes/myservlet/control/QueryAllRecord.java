@@ -44,7 +44,7 @@ public class QueryAllRecord extends HttpServlet{
       con.close();    //关闭连接
     }
     catch(SQLException exp){}
-    response.sendRedirect("byPageShow.jsp");//重定向到byPageshow.jsp
+    response.sendRedirect("byPageShow.jsp#content");//重定向到byPageshow.jsp
   }
   public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
     doPost(request,response);

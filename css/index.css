@@ -47,7 +47,6 @@ height:25px;
 line-height:25px;
 font-weight: bold;
 font-size:15px;
-	
 color:#fff;
 text-decoration:none;	
 outline:none;
@@ -55,11 +54,9 @@ text-align:center;
 }
 
 
-
 .header ul li a:link{
 color:#FFF;
 }
-
 
 
 .header ul li a.selected,.header ul li a:hover{	     
@@ -126,7 +123,48 @@ outline:none;
 text-align:center; 
 }
 
-.daohang ul li a.select,.daohang ul li a:hover{	
+.daohang ul li a.select, .daohang ul li a:hover{	
 color:#630;	
-background:#DFDFDF;    
+background:#DFDFDF;
+opacity: 0.9;     
 }
+
+/*二级导航*/
+.daohang li ul{
+position:absolute;
+left:-8px;
+top:2px;
+display:none;
+}
+
+.daohang li ul{
+position:relative;
+}
+
+.daohang li ul a{
+width:100px;
+display:block;
+text-decoration:none;
+color:#FFF;
+background:#630;
+padding:0 0px;
+}
+
+.daohang li ul a:hover{
+background-color:#DFDFDF;
+color:#630;
+}
+
+*html .daohang li ul{
+folat:left;
+height:1%;
+}
+
+*html .daohang li ul a{
+height:1%;
+}
+
+.daohang li:hover ul,li.over ul{
+display:block;
+}
+

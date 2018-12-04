@@ -8,7 +8,7 @@ font-family:Tahoma, Geneva, sans-serif;
 line-height:1.5em;
 background-color:#FFC;
 width:1365px;
-height:1100px;
+height:1150px;
 }
 
 .header {	/*上面部分*/	
@@ -19,7 +19,7 @@ text-align:center;
 margin:0 auto;
 background-image:url(../image/bigbook.jpg);
 background-size:100% 100%;	
-background-position:center;       
+background-position:center;   
 
 }
 
@@ -48,7 +48,6 @@ height:25px;
 line-height:25px;
 font-weight: bold;
 font-size:15px;
-	
 color:#fff;
 text-decoration:none;	
 outline:none;
@@ -56,12 +55,10 @@ text-align:center;
 }
 
 
-
 .header ul li a:link{
 	
 color:#FFF;
 }
-
 
 
 .header ul li a.selected,.header ul li a:hover{	  
@@ -134,6 +131,7 @@ text-align:center;
   opacity: 0.9;   
 }
 
+
 /*二级导航*/
 .daohang li ul{
 position:absolute;
@@ -175,10 +173,9 @@ display:block;
 
 
 
-
-#content{
+.content{
 	width: 1363px;
-        height: 375px;
+        height: 475px;
 	background:#FFF;
 	position:relative;
 	z-index:0;
@@ -188,16 +185,91 @@ display:block;
 	border-bottom:solid thin #CCC;
 }
 
-#content .submit{
+.content .btn{
+	position:absolute;
 	background:#8F4B18;
+	left: 150px;
+	top: 40px;
 	font-size: 14px;
 	color: #FFF;
 	font-weight: bold;
 	width: 56px;
 	height: 28px;
-        position: absolute;
-        left: 650px;
-	top: 200px;
+}
+
+
+
+table tr th{
+    color:#630;
+    
+}
+
+.putincar{
+	background:#8F4B18;
+	font-size:14px;
+	color: #FFF;
+	font-weight:bold;
+	width: 90px;
+	height: 28px;
+        position:relative;
+        top:8px;
+        margin:4px;
+}
+
+.xijie{
+	background:#8F4B18;
+	font-size:14px;
+	color: #FFF;
+	font-weight:bold;
+	width: 77px;
+	height: 28px;
+        position:relative;
+        top:8px;
+        margin:3px;
+}
+
+.shangyiye{
+	background:#8F4B18;
+	font-size:14px;
+	color: #FFF;
+	font-weight:bold;
+	width: 68px;
+	height: 28px;
+        position:relative;
+        top:-35px;
+        left:35px;
+       
+}
+.xiayiye{
+	background:#8F4B18;
+	font-size:14px;
+	color: #FFF;
+	font-weight:bold;
+	width: 68px;
+	height: 28px;
+        position:relative;
+        top:-34px;
+        left:80px;
+}
+.ok{
+	background:#8F4B18;
+	font-size:14px;
+	color: #FFF;
+	font-weight:bold;
+	width: 65px;
+	height: 28px;
+        position:relative;
+       
+}
+.tijiao{
+	background:#8F4B18;
+	font-size:14px;
+	color: #FFF;
+	font-weight:bold;
+	width: 65px;
+	height: 28px;
+        position:relative;
+       
 }
 
 

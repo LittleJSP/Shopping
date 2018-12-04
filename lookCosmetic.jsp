@@ -2,43 +2,22 @@
 <%@page import="java.sql.*" %>
 <HTML>
 
-<head><style type="text/css">
-@import url("css/liulanshuji.css");
-</style>
-</head>
+<head><%@ include file="head.txt" %>
+<style type="text/css">
+@import url("css/lookcosmetic.css");
+</style></head>
 
 <BODY>
-<div id="body_warpper">
-<div class="header">
-<ul>
-    <li><a href="exitServlet">退出</a></li>
-    <li><a href="inputRegisterMess.jsp#content">注册</a></li>
-    <li><a href="login.jsp#content">登录</a></li>
-</ul>
-<div class="zhongjian"> <h1>神奇书屋</h1></div>
 
-<p>劝君莫惜金缕衣，劝君惜取少年时</p>
+<div class="content" align="center">
 
-<div align="center" class="daohang">
-<ul>
-  <li><a href="index.jsp">首页</a></li>
-  <li><a href="lookCosmetic.jsp#content">浏览书籍</a></li>
-  <li><a href="searchCosmetic.jsp#content">查询书籍</a></li>
-  <li><a href="lookOrderForm.jsp#content">查看订单</a></li>
-  <li><a href="lookShoppingCar.jsp#content">我的购物车</a></li>
-</ul>
-</div>
-
-</div>
-
-
-<div class="content align="center">
 <font size=2>
-
+<h1>书籍分类</h1>
 <%  try{ Class.forName("com.mysql.jdbc.Driver");
-    }
+        }
     catch(Exception e){}
     String uri="jdbc:mysql://127.0.0.1/shop?"+"user=root&password=&characterEncoding=gb2312&serverTimezone=UTC";
+
     Connection con;
     Statement sql;
     ResultSet rs;
@@ -55,8 +34,11 @@
         out.print("<option value="+ id +">"+name+"</option>");
       }
       out.print("</select>");
-      out.print("<input type='submit' value='提交'>");
+      out.print("<br/>");
+      out.print("<br/>");
+      out.print("<input type='submit' value='提交' class='submit'>");
       out.print("</form>");
+      out.print("</div>");
       con.close();
     }
     catch(SQLException e){
@@ -78,6 +60,5 @@
 </div>
 
 
-</div>
 
 </BODY></HTML>
