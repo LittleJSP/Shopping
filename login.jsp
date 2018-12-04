@@ -45,8 +45,9 @@
    <tr><td>输入密码：<Input type=password name="password"></td></tr>
    </table>
    <br/>
-   </form> </div>
 <Input type=submit name="g" value ="提交" class="submit">
+   </form> </div>
+
 <br/><br/>
 <div align ="center">
     登录反馈信息：<jsp:getProperty name="loginBean" property="backNews"/>
