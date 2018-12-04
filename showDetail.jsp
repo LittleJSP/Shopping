@@ -1,35 +1,35 @@
-<%@ page contentType="text/html;charset=gb2312"%>
+<%@ page contentType="text/html;charset=gb2312" %>
 <%@ page import="mybean.data.Login" %>
 <%@ page import="java.sql.*" %>
-<jsp:useBean id="loginBean" class="mybean.data.Login" scope="session" />
+<jsp:useBean id="loginBean" class="mybean.data.Login" scope="session"/>
 <%@ include file="head.txt" %></HEAD>
-<HTML> <Body background=image/back.jpg><center>
+<HTML> <Body><center>
 <% if(loginBean==null){
-response.sendRedirect("login.jsp");
-
+response.sendRedirect("login.jsp#content");
 }
 else{
 boolean b= loginBean.getLogname()==null||loginBean.getLogname().length()==0;
 if(b)
-response.sendRedirect("1ogin.jsp");
+response.sendRedirect("1ogin.jsp#content");
 }
 String numberID=request.getParameter("xijie");
 out.print("<th>产品号"+numberID);
 if(numberID==null){
-out.print("没有产品号，无法查看细节");
+out.print("没有产品号,无法查看细节");
 return;
 }
 Connection con;
 Statement sql;
 ResultSet rs;
-try( Class.forName("com.mysql.jdbc.Driver");
+try(Class.forName("com.mysql.jdbc.Driver");
+}
 catch(Exception e){}
 String uri="jdbc:mysql://127.0.0.1/shop";
 try{
 con=DriverManager.getConnection(uri,"root","");
 sql=con.createStatement();
 String cdn=
-"SELECT * FROM cosmeticForm where cosmetic_number ='"numberID+"'";
+"SELECT * FROM cosmeticForm where cosmetic_number='"+numberID+"'";
 rs=sql.executeQuery(cdn);
 out.print("<table border=2>");
 out.print("<tr>");
@@ -51,8 +51,9 @@ picture=rs.getString(6);
 //便于购物车计算价格，尾缀上“#”价格值
 String goods="("+number+","+name+","+maker+","+price+")#"+price;
 goods=goods.replaceAll("\\p{Blank}","");
-< HEAD
-String button="<form action='putGoodsServlet'method = 'post'>"+"<input type='hidden' name='java' value="+goods+">"+<input type='submit' value='鏀惧叆璐墿杞?'></form>";
+String button="<form action='putGoodsServlet' method='post'>"+
+"<input type='hidden' name='java' value="+goods+">"+
+<input type='submit' value='放入购物车'></form>";
 out.print("<tr>");
 out.print("<td>"+number+"</td>");
 out.print("<td>"+name+"</td>");
@@ -71,6 +72,3 @@ con.close();
 catch(SQLException exp){}
 %>
 </Center></BODY></HTML>
-=======
-String button="<form action='putGoodsServlet'method = 'post'>"+"<input type='hidden' name='java' value="+goods+">"+<input type='submit' value='鏀惧叆璐墿杞
->>>>>>> c1654c5acfb02e00e8c21f4c11b08283357cf9e6

@@ -10,19 +10,17 @@
 <BODY>
 <div id="body_warpper">
 <div class="header">
- <ul>
+<ul>
     <li><a href="exitServlet">退出</a></li>
     <li><a href="inputRegisterMess.jsp#content">注册</a></li>
     <li><a href="login.jsp#content">登录</a></li>
-  </ul>
+</ul>
 <div class="zhongjian"> <h1>神奇书屋</h1></div>
 
-   
 <p>劝君莫惜金缕衣，劝君惜取少年时</p>
  
 <div align="center" class="daohang">
 <ul>
-
   <li><a href="index.jsp">首页</a></li>
   <li><a href="lookCosmetic.jsp#content">浏览书籍</a></li>
   <li><a href="searchCosmetic.jsp#content">查询书籍</a></li>
@@ -34,12 +32,9 @@
 </div>
 
 
-
-
+<div class="content align="center">
 <font size=2>
 
-
-<div class="content align="center">
 <%  try{ Class.forName("com.mysql.jdbc.Driver");
     }
     catch(Exception e){}
@@ -68,7 +63,7 @@
       out.print(e);
     }
 %>
-</div></font>
+</font></div>
 
 
 <div class="footer">
@@ -80,9 +75,7 @@
      <br />
      <br />
       Copyright &copy; &nbsp;<a href="index.jsp">神奇书屋</a>&nbsp;&nbsp;2018&nbsp;&nbsp;| &nbsp;&nbsp;热线：888-520-1314&nbsp;&nbsp;| &nbsp;&nbsp;地址：深圳市南山区华侨城暨南大学深圳旅游学院</p> 
-  </div>
-
-
+</div>
 
 
 </div>

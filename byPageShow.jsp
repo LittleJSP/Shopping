@@ -3,16 +3,24 @@
 <%@ page import="com.sun.rowset.*" %>
 <jsp:useBean id="dataBean" class="mybean.data.DataByPage" scope="session"/>
 <%@ include file="head.txt" %></HEAD>
-<HTML><Body background=image/happy.jpg><center>
+<HTML><Body>
+
+<head><style type="text/css">
+@import url("css/liulanshuji.css");
+</style>
+</head>
+
+<div class="content align="center">
+<center>
 <BR>当前显示的内容是：
   <table border=2>
-  <tr>
+<tr>
     <th>化妆品标识号</th>
     <th>化妆品名称</th>
     <th>化妆品制造商</th>
     <th>化妆品价格</th>
     <th>查看详情</th>
-    <td><font color=blue>添加到购物车</font></td>
+    <td><font color=brown>添加到购物车</font></td>
   </tr>
 <jsp:setProperty name="dataBean" property="pageSize" param="pageSize"/>
 <jsp:setProperty name="dataBean" property="currentPage" param="currentPage"/>
@@ -29,11 +37,11 @@
   int pageSize=dataBean.getPageSize();    //每页显示的记录数
   int totalPages=dataBean.getTotalPages();
   if(totalRecord%pageSize==0)
-    totalPages=totalRecord/pageSize;  //总页数
+  totalPages=totalRecord/pageSize;  //总页数
   else
-    totalPages=totalRecord/pageSize+1;
-  dataBean.setPageSize(pageSize);
-  dataBean.setTotalPages(totalPages);
+   totalPages=totalRecord/pageSize+1;
+   dataBean.setPageSize(pageSize);
+   dataBean.setTotalPages(totalPages);
   if(totalPages>=1){
     if(dataBean.getCurrentPage()<1)
       dataBean.setCurrentPage(dataBean.getTotalPages());
@@ -56,7 +64,7 @@
         "<input type='submit' value='放入购物车'></form>";
       String detail="<form action='showDetail.jsp' method='post'>"+
         "<input type='hidden' name='xijie' value="+number+">"+
-        "<input type='submit' value='查看细节’></form>";
+        "<input type='submit' value='查看细节'></form>";
       out.print("<tr>");
       out.print("<td>"+number+"</td>");
       out.print("<td>"+name+"</td>");
@@ -91,4 +99,19 @@
     <Input type=submit name="g" value ="提交"></FORM></td></tr>
 </Table>
 </Center>
+</div>
+
+
+<div class="footer">
+<p align="center"><a href="index.jsp">首页</a> | 
+<a href="ookCosmetic.jsp#content">浏览书籍</a>| 
+<a href="searchCosmetic.jsp#content">查询书籍</a> | 
+<a href="lookOrderForm.jsp#content">查看订单</a> | 
+<a href="lookShoppingCar.jsp#content">我的购物车</a>
+<br /><br />
+Copyright &copy; &nbsp;<a href="index.jsp">神奇书屋</a>&nbsp;&nbsp;2018&nbsp;&nbsp;| &nbsp;&nbsp;热线：888-520-1314&nbsp;&nbsp;| &nbsp;&nbsp;地址：深圳市南山区华侨城暨南大学深圳旅游学院</p> 
+</div>
+</div>
+
+
 </BODY ></HTML>

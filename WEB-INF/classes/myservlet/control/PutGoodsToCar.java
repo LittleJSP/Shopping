@@ -36,8 +36,8 @@ out.print("<%@ include file='head.txt' %></HEAD>");
 out.println("<html><body>");
 out.println("<h2>"+goods+"放入购物车</h2>");
 out.println("查看购物车或返回浏览化妆品<br>");
-out.println("<a href=lookShoppingCar.jsp>查看购物车</a>");
-out.println("<br><a href=byPageShow.jsp>浏览化妆品</a>");
+out.println("<a href=lookShoppingCar.jsp#content>查看购物车</a>");
+out.println("<br><a href=byPageShow.jsp#content>浏览化妆品</a>");
 out.println("</body></htm>");
 }
 catch(IOException exp){}
