@@ -10,7 +10,7 @@ body{
 #body_wrapper {	/*背景容器的样式*/
 	width: 1350px;
 	height:630px;
-	background-color:#FFC;	
+	background-color:#FFC;
 	text-align:center;
 	margin:0 auto;
         background-image:url(../image/bigbook.jpg);
@@ -61,10 +61,10 @@ body{
 	color:#FFF;
 }
 
-.header ul li a.selected,.header ul li a:hover{	
+.header ul li a.selected,.header ul li a:hover{
         color:#000;
 	background-color:#D9D9D9;
-	opacity: 0.5; 
+	opacity: 0.5;
 	}
 .zhongjian{
 	width: 1352px;
@@ -115,10 +115,10 @@ body{
 	color: #FFF;
 	text-decoration:none;
 	outline:none;
-	text-align:center; 
+	text-align:center;
 }
 .ddaohang ul li a.select,.daohang ul li a:hover{
 	color:#fff;
 	background:#2f2f2f;
-        opacity: 1; 
+        opacity: 1;
 }
