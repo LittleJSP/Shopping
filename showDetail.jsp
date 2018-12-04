@@ -10,7 +10,7 @@ response.sendRedirect("login.jsp#content");
 else{
 boolean b= loginBean.getLogname()==null||loginBean.getLogname().length()==0;
 if(b)
-response.sendRedirect("1ogin.jsp#content");
+response.sendRedirect("login.jsp#content");
 }
 String numberID=request.getParameter("xijie");
 out.print("<th>产品号"+numberID);
@@ -21,7 +21,7 @@ return;
 Connection con;
 Statement sql;
 ResultSet rs;
-try(Class.forName("com.mysql.jdbc.Driver");
+try{Class.forName("com.mysql.jdbc.Driver");
 }
 catch(Exception e){}
 String uri="jdbc:mysql://127.0.0.1/shop";
@@ -37,7 +37,7 @@ out.print("<th>产品号");
 out.print("<th>名称");
 out.print("<th>制造商");
 out.print("<th>价格");
-out.print("<th><font color=blue>放入购物车</font>");
+out.print("<th><font color=brown>放入购物车</font>");
 out.print("</TR>");
 String picture="welcome.jpg";
 String detailMess="";
@@ -51,9 +51,7 @@ picture=rs.getString(6);
 //便于购物车计算价格，尾缀上“#”价格值
 String goods="("+number+","+name+","+maker+","+price+")#"+price;
 goods=goods.replaceAll("\\p{Blank}","");
-String button="<form action='putGoodsServlet' method='post'>"+
-"<input type='hidden' name='java' value="+goods+">"+
-<input type='submit' value='放入购物车'></form>";
+String button="<form action='putGoodsServlet' method='post'>"+"<input type='hidden' name='java' value="+goods+">"+"<input type='submit' value='放入购物车'></form>";
 out.print("<tr>");
 out.print("<td>"+number+"</td>");
 out.print("<td>"+name+"</td>");
@@ -64,7 +62,7 @@ out.print("</tr>");
 }
 out.print("</table>");
 out.print("产品详情:<br>");
-out println("<div align=center>"+detailMess+"<div>");
+out.println("<div align=center>"+detailMess+"<div>");
 String pic="<img src='image/"+picture+"'width=260 height=200></img>";
 out.print(pic);
 con.close();
