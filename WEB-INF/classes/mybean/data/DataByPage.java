@@ -2,7 +2,7 @@ package mybean.data;
 import com.sun.rowset.*;
 public class DataByPage{
   CachedRowSetImpl rowSet=null;
-  int pageSize=1;
+  int pageSize=10;
   int totalPages=1;
   int currentPage=1;
   public void setRowSet(CachedRowSetImpl set){

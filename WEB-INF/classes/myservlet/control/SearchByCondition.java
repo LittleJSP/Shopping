@@ -27,7 +27,7 @@ public class SearchByCondition extends HttpServlet{
       condition= "SELECT * FROM cosmeticForm where cosmetic_number ='"+searchMess+"'";
     }
     else if(radioMess.equals("cosmetic_name")){
-      condition= "SELECT * FROM cosmeticForm where cosmetic_name LTKE'%"+searchMess+"%'";
+      condition= "SELECT * FROM cosmeticForm where cosmetic_name LIKE '%"+searchMess+"%'";
     }
     else if(radioMess.equals("cosmetic_price")){
       double max=0, min=0;
@@ -76,7 +76,7 @@ public class SearchByCondition extends HttpServlet{
       con.close();    //πÿ±’¡¨Ω”
     }
     catch(SQLException exp){}
-    response.sendRedirect("byPageShow.jsp");
+      response.sendRedirect("byPageShow.jsp");
   }
   public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
     doPost(request,response);
