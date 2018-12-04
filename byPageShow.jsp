@@ -28,7 +28,6 @@
   CachedRowSetImpl rowSet=dataBean.getRowSet();
   if(rowSet==null){
     out.print("没有任何查询信息,无法浏览"+"<br/>");
-    out.print("<font size=6>我真的佛了，什么都查不到，你已经是个成熟的程序语言了，不要让你的主人这么操心好不好？？？</font>");
     return;
   }
   rowSet.last();
