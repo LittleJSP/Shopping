@@ -17,9 +17,9 @@
   </ul>
 <div class="zhongjian"> <h1>神奇书屋</h1></div>
 
-   
+
 <p>劝君莫惜金缕衣，劝君惜取少年时</p>
- 
+
 <div align="center" class="daohang">
 <ul>
 
@@ -72,14 +72,14 @@
 
 
 <div class="footer">
-    <p align="center"><a href="index.jsp">首页</a> | 
-<a href="ookCosmetic.jsp#content">浏览书籍</a>| 
-<a href="searchCosmetic.jsp#content">查询书籍</a> | 
-<a href="lookOrderForm.jsp#content">查看订单</a> | 
+    <p align="center"><a href="index.jsp">首页</a> |
+<a href="lookCosmetic.jsp#content">浏览书籍</a>| 
+<a href="searchCosmetic.jsp#content">查询书籍</a> |
+<a href="lookOrderForm.jsp#content">查看订单</a> |
 <a href="lookShoppingCar.jsp#content">我的购物车</a>
      <br />
      <br />
-      Copyright &copy; &nbsp;<a href="index.jsp">神奇书屋</a>&nbsp;&nbsp;2018&nbsp;&nbsp;| &nbsp;&nbsp;热线：888-520-1314&nbsp;&nbsp;| &nbsp;&nbsp;地址：深圳市南山区华侨城暨南大学深圳旅游学院</p> 
+      Copyright &copy; &nbsp;<a href="index.jsp">神奇书屋</a>&nbsp;&nbsp;2018&nbsp;&nbsp;| &nbsp;&nbsp;热线：888-520-1314&nbsp;&nbsp;| &nbsp;&nbsp;地址：深圳市南山区华侨城暨南大学深圳旅游学院</p>
   </div>
 
 
