@@ -11,7 +11,7 @@
 <input type=radio name="radio" value="cosmetic_number">化妆品版本号
 <Input type=radio name="radio" value="cosmetic_name" checked="ok">化妆品名称
 <Input type=radio name="radio" value="cosmetic_price">化妆品价格
-<br><Input type=submit name="g" value="HE">
+<br><Input type=submit name="g" value="查询">
 </Form>
 </div>
 </Font></BODY></HTML>

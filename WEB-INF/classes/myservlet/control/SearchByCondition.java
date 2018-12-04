@@ -2,7 +2,7 @@ package myservlet.control;
 import mybean.data.DataByPage;
 import com.sun.rowset.*;
 import java.sql.*;
-import Java.io.*;
+import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 public class SearchByCondition extends HttpServlet{
@@ -14,7 +14,7 @@ public class SearchByCondition extends HttpServlet{
     }
     catch(Exception e){}
   }
-  public void doPost(HttpServletRequeSt request,HttpServletResponse response) throws ServletException, IOException{
+  public void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
     request.setCharacterEncoding("gb2312");
     String searchMess= request.getParameter("searchMess");
     String radioMess= request.getParameter("radio");
@@ -51,7 +51,7 @@ public class SearchByCondition extends HttpServlet{
       }
       condition= "SELECT * FROM cosmeticForm where"+"cosmetic_price <= "+max+" AND cosmetic_price >="+ min;
     }
-    Httpsession session=request.getSession(true);
+    HttpSession session=request.getSession(true);
     Connection con= null;
     DataByPage dataBean= null;
     try{
@@ -68,7 +68,7 @@ public class SearchByCondition extends HttpServlet{
     String url="jdbc:mysql://127.0.0.1/shop?"+"user=root&password=&characterEncoding=gb2312&serverTimezone=UTC";
     try{
       con= DriverManager.getConnection(url);
-      Statement sql= con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,Resultset.TYPE_CONCUR_READ_ONLY);
+      Statement sql= con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
       ResultSet rs= sql.executeQuery(condition);
       rowSet= new CachedRowSetImpl();   //创建行集对象
       rowSet.populate(rs);
@@ -78,7 +78,7 @@ public class SearchByCondition extends HttpServlet{
     catch(SQLException exp){}
     response.sendRedirect("byPageShow.jsp");
   }
-  public void doGet(HttpServletRequest request,HttpServeltResponse response) throws ServletException,IOException{
+  public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
     doPost(request,response);
   }
   public void fail(HttpServletRequest request,HttpServletResponse response,String backNews){

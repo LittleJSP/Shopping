@@ -13,33 +13,31 @@ public class HandleBuyGoods extends HttpServlet {
         }
         catch(Exception e){}
       }
-      public void doPost(HttpServletRequest request,HttpServletResponse
-        response) throws ServletException,IOException{
+      public void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
         request.setCharacterEncoding("gb2312");
         String buyGoodsMess = request.getParameter("buy");
         if(buyGoodsMess == null || buyGoodsMess.length()==0){
-          fail(request,response,"è´­ç‰©è½¦æ²¡æœ‰ç‰©å“,æ— æ³•ç”Ÿæˆè®¢å•");
+          fail(request,response,"¹ºÎï³µÃ»ÓĞÎïÆ·,ÎŞ·¨Éú³É¶©µ¥");
           return;
         }
         String price = request.getParameter("price");
         if(price==null || price.length()==0){
-          fail(request,response,"æ²¡æœ‰è®¡ç®—ä»·æ ¼å’Œ,æ— æ³•ç”Ÿæˆè®¢å•");
+          fail(request,response,"Ã»ÓĞ¼ÆËã¼Û¸ñºÍ,ÎŞ·¨Éú³É¶©µ¥");
           return;
       }
       float sum= Float.parseFloat(price);
       Login loginBean= null;
-      HttpSession sessions = request.getSession(true);
+      HttpSession session = request.getSession(true);
       try{ loginBean = (Login)session.getAttribute("loginBean");
             boolean b = loginBean.getLogname()==null ||
             loginBean.getLogname().length()==0;
             if(b)
               response.sendRedirect("1ogin.jsp");
-      }
-      catch(Exception exp){
+        }
+        catch(Exception exp){
           response.sendRedirect("login.jsp");
         }
-        String uri="jdbc:mysql://127.0.0.1/shop?"+
-            "user = root&password = &characterEncoding = gb2312";
+        String uri="jdbc:mysql://127.0.0.1/shop?"+"user=root&password=&characterEncoding=gb2312&serverTimezone=UTC";
         Connection con;
         PreparedStatement sql;
         try{ con= DriverManager.getConnection(uri);
@@ -52,26 +50,25 @@ public class HandleBuyGoods extends HttpServlet {
               sql.executeUpdate();
               LinkedList car = loginBean.getCar();
               car.clear();
-              success(request,response,"ç”Ÿæˆè®¢å•æˆåŠŸ");
+              success(request,response,"Éú³É¶©µ¥³É¹¦");
           }
           catch(SQLException exp){
-                fail(request,response,"ç”Ÿæˆè®¢å•å¤±è´¥"+exp);
+                fail(request,response,"Éú³É¶©µ¥Ê§°Ü"+exp);
               }
           }
-        public void doGet(HttpServletRequest request,HttpServletResponse
-            response) throws ServletException,IOException {
+        public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException {
             doPost(request, response);
         }
-        public void success(HttpServletRequest request,HttpServletResponse response,String backnews){
+        public void success(HttpServletRequest request,HttpServletResponse response,String backNews){
             response.setContentType("text/html;charset=GB2312");
             try {
               PrintWriter out = response.getWriter();
               out.println("<html><body>");
               out.println("<h2>"+backNews+"</h2>");
-              out.println("è¿”å›ä¸»é¡µ");
-              out.println("<a href= index.jsp>ä¸»é¡µ</a>");
-              out.println("<br>æŸ¥çœ‹è®¢å•");
-              out.println("<a href= lookOrderForm.jsp>æŸ¥çœ‹è®¢å•<a>");
+              out.println("·µ»ØÖ÷Ò³");
+              out.println("<a href= index.jsp>Ö÷Ò³</a>");
+              out.println("<br>²é¿´¶©µ¥");
+              out.println("<a href= lookOrderForm.jsp>²é¿´¶©µ¥<a>");
               out.println("</body ></html>");
             }
               catch(IOException exp){}
@@ -83,8 +80,8 @@ public class HandleBuyGoods extends HttpServlet {
             PrintWriter out= response.getWriter();
             out.println("<html><body>");
             out.println("<h2>"+backNews+"</h2>");
-            out.println("è¿”å›ä¸»é¡µ:");
-            out.println("<a href= index.jsp>ä¸»é¡µ</a>");
+            out.println("·µ»ØÖ÷Ò³:");
+            out.println("<a href= index.jsp>Ö÷Ò³</a>");
             out.println("</body></html>");
           }
           catch(IOException exp){}
