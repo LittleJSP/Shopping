@@ -76,7 +76,7 @@ public class SearchByCondition extends HttpServlet{
       con.close();    //πÿ±’¡¨Ω”
     }
     catch(SQLException exp){}
-      response.sendRedirect("byPageShow.jsp");
+    response.sendRedirect("byPageShow.jsp");
   }
   public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
     doPost(request,response);
