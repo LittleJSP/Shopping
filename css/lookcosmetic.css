@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 
 body{
-	
+
 margin:0px;
 padding:0px;
 font-family:Tahoma, Geneva, sans-serif;
@@ -11,33 +11,33 @@ width:1365px;
 height:1100px;
 }
 
-.header {	/*上面部分*/	
+.header {	/*上面部分*/
 width: 1365px;
 height: 625px;
-background-color:#FFC;	
+background-color:#FFC;
 text-align:center;
 margin:0 auto;
 background-image:url(../image/bigbook.jpg);
-background-size:100% 100%;	
-background-position:center;       
+background-size:100% 100%;
+background-position:center;
 
 }
 
-.header ul{	
+.header ul{
 z-index:100;
 margin:0 0 0 14px;
 padding:0;
 list-style-type:none;
 }
 
-.header ul li{	
+.header ul li{
 padding: 0 2px;
 position: relative;
 display: inline;
-float:right;	
+float:right;
 right:90px;
 top:10px;
-z-index: 100;	
+z-index: 100;
 height: 30px;
 }
 
@@ -49,44 +49,44 @@ line-height:25px;
 font-weight: bold;
 font-size:15px;
 color:#fff;
-text-decoration:none;	
+text-decoration:none;
 outline:none;
 text-align:center;
 }
 
 
 .header ul li a:link{
-	
+
 color:#FFF;
 }
 
 
-.header ul li a.selected,.header ul li a:hover{	  
+.header ul li a.selected,.header ul li a:hover{
 color:#000;
 background-color:#D9D9D9;
-opacity: 0.8; 
+opacity: 0.8;
 	}
 
 
 .zhongjian{
-width: 1365px;	
-height: 308px;	
+width: 1365px;
+height: 308px;
 background-color: rgba(255,255,255,0.3);
-position: relative;	
+position: relative;
 left: 0px;
 top: 122px;
 }
 
 
-.zhongjian h1{       
-font-size:100px;       
-text-align:center;       
-position: relative;     
-top:65px;       
+.zhongjian h1{
+font-size:100px;
+text-align:center;
+position: relative;
+top:65px;
 left:85px;
 }
 
-.header p {		
+.header p {
 color: #FFF;
 position: relative;
 left: 24px;
@@ -99,12 +99,12 @@ margin: 5px auto;
 }
 
 .daohang ul li{
-position:relative;	
-display:inline;	
-float:left;       
-padding: 0 1px;	
+position:relative;
+display:inline;
+float:left;
+padding: 0 1px;
 left:395px;
-top:0px;	
+top:0px;
 z-index:100;
 height: 30;
 }
@@ -113,22 +113,22 @@ height: 30;
 background:#630;
 }
 
-.daohang ul li a{	
+.daohang ul li a{
 display:block;
 padding:0 30px;
 height:40px;
-line-height:40px;	
+line-height:40px;
 font-size:15px;
 color: #FFF;
 text-decoration:none;
 outline:none;
-text-align:center; 
+text-align:center;
 }
 
-.daohang ul li a.select,.daohang ul li a:hover{	
-  color:#630;	
-  background:#DFDFDF;  
-  opacity: 0.9;   
+.daohang ul li a.select,.daohang ul li a:hover{
+  color:#630;
+  background:#DFDFDF;
+  opacity: 0.9;
 }
 
 /*二级导航*/
@@ -191,14 +191,14 @@ display:block;
 	font-weight:bold;
 	width: 56px;
 	height: 28px;
-  
+
 }
 
 font{
     position:relative;
     top:90px;
     left:10px;
-    
+
 }
 
 /*底部*/
@@ -217,8 +217,8 @@ font{
 }
 
 .footer a {
-	color:#714D37;	
-		
+	color:#714D37;
+
 }
 .footer a:hover {
 	font-weight:bold;

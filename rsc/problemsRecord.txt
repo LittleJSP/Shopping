@@ -43,3 +43,5 @@ B.数字0和英文o的区别：  看着  0o  ，左边是数字
 案例：第一个订单id为0，尝试生成第二个订单是提示错误
 ErrorCode：java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '0' for key 'PRIMARY'
 解决方法：Mysql的订单表里的id属性，应设置为自增（同样与servlet提交订单的方法有关）。
+
+九.放入购物车所转去的页面显示有问题。
