@@ -49,7 +49,7 @@ public class SearchByCondition extends HttpServlet{
         fail(request,response,"输入的价格格式有错误");
         return;
       }
-      condition= "SELECT * FROM cosmeticForm where"+"cosmetic_price <= "+max+" AND cosmetic_price >="+ min;
+      condition= "SELECT * FROM cosmeticForm where "+"cosmetic_price <= "+max+" AND cosmetic_price >= "+min;
     }
     HttpSession session=request.getSession(true);
     Connection con= null;
@@ -82,11 +82,11 @@ public class SearchByCondition extends HttpServlet{
     doPost(request,response);
   }
   public void fail(HttpServletRequest request,HttpServletResponse response,String backNews){
-    response.setContentType("text/html;charset= gb2312");
+    response.setContentType("text/html;charset=gb2312");
     try{
       PrintWriter out= response.getWriter();
       out.println("<html><body>");
-      out.println("<h2>+backNews+</h2>");
+      out.println("<h2>"+backNews+"</h2>");
       out.println("返回:");
       out.println("<a href=searchCosmetic.jsp>查询化妆品</a>");
       out.println("</body></html>");

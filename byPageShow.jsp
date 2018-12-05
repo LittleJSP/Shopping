@@ -8,10 +8,8 @@
 <style type="text/css">
 @import url("css/bypageshow.css");
 </style></head>
-
 <Body>
 <div class="content" align="center">
-
 <input type="button" name="Submit" onclick="javascript:history.back(-1);" value="返回" class="btn">
 <center>
 <BR><h4>当前显示的内容是：</h4>
@@ -29,7 +27,7 @@
 <%
   CachedRowSetImpl rowSet=dataBean.getRowSet();
   if(rowSet==null){
-    out.print("没有任何查询信息,无法浏览"+"<br/>");
+    out.print("抱歉，没有相关商品信息"+"<br/>");
     return;
   }
   rowSet.last();
